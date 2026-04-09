@@ -789,6 +789,23 @@
             { url: "designs/product/sub-products/sub-product-v3.html", title: "Sub Product v3", category: "Product", badge: "Product", description: "Sub product page design - version 3." },
             { url: "designs/product/sub-products/<!DOCTYPE html>.html", title: "Sub Product Draft", category: "Product", badge: "Product", description: "Draft sub product HTML file." },
 
+            // ── Homepage ───────────────────────────────────────────────
+            { url: "designs/homepage/v1.html", title: "Homepage v1", category: "Homepage", badge: "Home", description: "Main homepage design for Taigus." },
+
+            // ── Contact ────────────────────────────────────────────────
+            { url: "designs/contact/v1.html", title: "Contact v1", category: "Contact", badge: "Contact", description: "Contact page and inquiry layout." },
+
+            // ── Comparison ─────────────────────────────────────────────
+            { url: "designs/comparison.html", title: "Comparison", category: "Comparison", badge: "Compare", description: "Raw vs IML printed container comparison." },
+
+            // ── Industry ──────────────────────────────────────────────
+            { url: "designs/industry/overview.html", title: "Industry Overview", category: "Industry", badge: "Industry", description: "Overview of all industry sectors." },
+            { url: "designs/industry/chemical.html", title: "Chemical Industry", category: "Industry", badge: "Industry", description: "Chemicals and industrial packaging page." },
+            { url: "designs/industry/FMCG-consumer-goods.html", title: "FMCG Consumer Goods", category: "Industry", badge: "Industry", description: "FMCG and consumer goods packaging page." },
+            { url: "designs/industry/food-dairy.html", title: "Food & Dairy", category: "Industry", badge: "Industry", description: "Food and dairy packaging page." },
+            { url: "designs/industry/personal-care.html", title: "Personal Care", category: "Industry", badge: "Industry", description: "Personal care and cosmetics page." },
+            { url: "designs/industry/pharma-healthcare.html", title: "Pharma & Healthcare", category: "Industry", badge: "Industry", description: "Pharma and healthcare packaging page." },
+
             // ── Trust Authority ───────────────────────────────────────
             { url: "designs/trust-authority/infrastructure/v1.html", title: "Infrastructure v1", category: "Trust Authority", badge: "Trust", description: "Trust authority infrastructure page - version 1." },
 
@@ -796,6 +813,12 @@
 
         /* badge class map */
         const BADGE_CLS = {
+            "Product": "b-land",
+            "Homepage": "b-land",
+            "Contact": "b-reg",
+            "Comparison": "b-pay",
+            "Industry": "b-comp",
+            "Trust Authority": "b-about",
             "Landing Pages": "b-land",
             "Registration": "b-reg",
             "Payment": "b-pay",
@@ -937,25 +960,25 @@
                 const res = await fetch(`https://api.github.com/repos/${REPO}/git/trees/${BRANCH}?recursive=1`);
                 if (!res.ok) return;
                 const data = await res.json();
-                
+
                 // Keep only HTML files inside the "designs" directory
                 const htmlFiles = data.tree.filter(t => t.path.startsWith("designs/") && t.path.endsWith(".html"));
-                
+
                 const newDesigns = htmlFiles.map(file => {
                     const parts = file.path.split("/");
                     // Category is typically the folder instantly inside designs/
                     const category = parts[1] ? parts[1].replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase()) : "Other";
                     const title = parts[parts.length - 1].replace(".html", "").replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
-                    
+
                     return {
-                        url: file.path, 
-                        title: title, 
-                        category: category, 
+                        url: file.path,
+                        title: title,
+                        category: category,
                         badge: category,
                         description: `Auto-discovered: ${file.path}`
                     };
                 });
-                
+
                 sessionStorage.setItem("gh_designs_cache", JSON.stringify(newDesigns));
                 mergeDesigns(newDesigns);
             } catch (err) {

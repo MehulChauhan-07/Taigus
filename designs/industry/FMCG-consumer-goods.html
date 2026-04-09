@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FMCG &amp; Consumer Goods Packaging | Taigus Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-50 antialiased overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#e7edf3] dark:border-slate-800">
+        <div class="max-w-[1280px] mx-auto px-6 lg:px-10 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-4 text-[#0d141b] dark:text-white">
+                <div class="size-8 text-primary">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                            fill="currentColor"></path>
+                        <path clip-rule="evenodd"
+                            d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="text-lg font-bold leading-tight tracking-tight">Taigus Pvt. Ltd.</h2>
+            </div>
+            <nav class="hidden md:flex flex-1 justify-end items-center gap-8">
+                <div class="flex items-center gap-9">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Solutions</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Industries</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Innovation</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sustainability</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+                </div>
+                <button
+                    class="bg-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm">
+                    Contact Us
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-[1280px] mx-auto px-6 lg:px-10 space-y-20 pb-20">
+        <!-- Hero Section -->
+        <section class="pt-8">
+            <div class="@container">
+                <div class="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end px-6 pb-12 lg:px-16 lg:pb-20 relative overflow-hidden group shadow-2xl"
+                    data-alt="Vibrant FMCG retail shelf display featuring colorful products"
+                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUYEymviMRCb9Rp9ODYsYAMP6RzGK0jiXEVRmwyUuklw0bJ9K9x-YG9_BJXWR0Pr2wIMQkZ-tf0D9a2lJD-jTgC1tnc9yj-LnPKG8RUbPf2yS0iz16TOdSMR4xT8kKrnhCVVeHAzxbIrB_izfIO8lL5P2DCm7njmn5g7uhNL0mNaPORC15eoNQN7H-Y8BVi7_CxWcPM9RSOPQY2z9T-uD759ofIc-TJXoQ-HPMvIf13uOT5n0lP8G3Hl4IL1T2paxyWHXNAU0WDyc");'>
+                    <div class="flex flex-col gap-4 text-left max-w-3xl">
+                        <span
+                            class="inline-block bg-primary/20 backdrop-blur-sm text-white border border-white/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest w-fit">Industry
+                            Detail: FMCG</span>
+                        <h1 class="text-white text-4xl lg:text-6xl font-bold leading-tight tracking-[-0.033em]">
+                            Elevate Your Brand on the Shelf: Premium IML Packaging
+                        </h1>
+                        <p class="text-white/90 text-lg lg:text-xl font-normal leading-relaxed max-w-2xl">
+                            High-definition graphics and moisture-resistant labeling designed for maximum shelf
+                            visibility and superior consumer appeal.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+                        <button
+                            class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform hover:scale-105">
+                            Request a Sample
+                        </button>
+                        <button
+                            class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white/10 backdrop-blur-md border border-white/30 text-white text-base font-bold hover:bg-white/20 transition-all">
+                            View Case Studies
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Market Appeal & Branding -->
+        <section class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-primary text-sm font-bold uppercase tracking-widest">Branding Excellence</h2>
+                    <h3 class="text-3xl lg:text-5xl font-bold leading-tight tracking-tight">Market Appeal &amp; Superior
+                        Branding</h3>
+                    <p class="text-[#4c739a] dark:text-slate-400 text-lg leading-relaxed">
+                        Why leading FMCG brands are switching to In-Mold Labeling for superior shelf-presence and
+                        durability. Our integrated labels offer a seamless aesthetic that traditional stickers simply
+                        cannot match.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div
+                        class="flex gap-4 p-5 rounded-xl border border-[#cfdbe7] dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:shadow-lg transition-shadow">
+                        <div
+                            class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined text-3xl">photo_camera</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">High-Definition Graphics</h4>
+                            <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-1">Photorealistic image quality with
+                                vivid color reproduction that catches the consumer's eye from every angle.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 p-5 rounded-xl border border-[#cfdbe7] dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:shadow-lg transition-shadow">
+                        <div
+                            class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined text-3xl">sync</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">360° Decoration</h4>
+                            <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-1">Full coverage labeling including
+                                the base and lids, maximizing your marketing real estate on the shelf.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 p-5 rounded-xl border border-[#cfdbe7] dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:shadow-lg transition-shadow">
+                        <div
+                            class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined text-3xl">touch_app</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold">Premium Integrated Feel</h4>
+                            <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-1">The label becomes an integral
+                                part of the container, eliminating wrinkles, peeling, or moisture damage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
+                    <img class="w-full h-full object-cover"
+                        data-alt="Close up of high-quality premium printed plastic packaging"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYbghEhz9Op1-ry7KYYuYAn_4XC_GcfxJgAFt64KuLuuN8vrbi4B6NbvF27H0t47qLfVe_EYZ7K3pNZLWpEpn0NW_Chhol_aQ3DrdBL-oJgQ31n_b922TIA5grhkInhDyWTLqJ4pemNsZ1acV1PkBmKI4ybKIr_n5GNleQGuQut2QOrF_F6fpWvEefrxZc2F-DCD3QeBjhZJd8DqXPtUVc_Uussygp86Ku_nsSygSWqA2PJQNWmoux7Ko5nde6rdvqzeJ-St5cfv4" />
+                </div>
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white dark:bg-background-dark p-6 rounded-xl shadow-xl border border-[#cfdbe7] dark:border-slate-800 max-w-[240px]">
+                    <p class="text-primary font-bold text-4xl">100%</p>
+                    <p class="text-sm font-medium mt-1">Moisture Resistance &amp; Label Integrity</p>
+                </div>
+            </div>
+        </section>
+        <!-- Product Spotlight Section -->
+        <section>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-primary text-sm font-bold uppercase tracking-widest">Product Spotlight</h2>
+                    <h3 class="text-3xl font-bold tracking-tight">Versatile FMCG Containers</h3>
+                </div>
+                <button class="text-primary font-bold text-sm flex items-center gap-2 hover:underline">
+                    Download Full Catalog <span class="material-symbols-outlined">download</span>
+                </button>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Round Buckets -->
+                <div class="group flex flex-col gap-4">
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-900 rounded-2xl border border-[#cfdbe7] dark:border-slate-800 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                            data-alt="Round industrial plastic buckets for cleaning products"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt7r0Vu7PNOA6vq95H_ZaTSJoZC_UPpaIZVrDpBqIiJOXax3Q_shGkgNPTvIom98G04dyEr2WGJ-tP17bCJMIoJ1jnDLQOzWfwNiuoZAhP-u7EFllXrQu8jZQVNK7cjafIf2Sug24dGpZLzxiByp9jRaquAYOVPt_ZCX18mi94Ku6f8tevc56_vlhn-J8PCZ6MTD3tIePK71-wl59hoy9ixYKqBwP90V9Rzv6RjQu-QEvhzHHCu0GHCbWnZchvp6OOmHuhE6GCXL4" />
+                        <div
+                            class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded">
+                            MOST POPULAR</div>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold">Round Buckets</h4>
+                        <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-2 leading-relaxed">
+                            Ideal for bulk household cleaners, detergents, and industrial consumer goods. Features
+                            ergonomic handles and child-resistant lids.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">1L
+                                to 20L</span>
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">Reinforced
+                                Rim</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Square Snap Fit -->
+                <div class="group flex flex-col gap-4">
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-900 rounded-2xl border border-[#cfdbe7] dark:border-slate-800 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                            data-alt="Square plastic snap fit containers for laundry pods"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK5s02O3b4XRwdACIJxXUqXD5M1G-ibG2H0LLGhYPIe_fxcQjeNw06HTpSMmSnzxdjf7p7U4RVw4Id3xwAjlKciwrkAnx_YFUeBDYrnKfE3BI79HlAGScS2aqNTsIzprT6BXSOTVeD2iLx_PrXTF0o0jTItz7L5k8E2kk0eDjAgjuwsl7pI2qXURcJ4k-ndN6Kqu6Ke8aaAJSWy8-mjVY5bSmKfzYZx-y57Xtjai3D3wSZvWGPl_9fRpyAYSRjNBd2vhzVx0swQNc" />
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold">Square Snap Fit</h4>
+                        <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-2 leading-relaxed">
+                            Perfect for dishwasher pods, specialty chemicals, or concentrated liquids. Optimized for
+                            shelf density and secure closure.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">Tamper-Evident</span>
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">Snap
+                                Lock</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oval Containers -->
+                <div class="group flex flex-col gap-4">
+                    <div
+                        class="aspect-square bg-white dark:bg-slate-900 rounded-2xl border border-[#cfdbe7] dark:border-slate-800 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform group-hover:scale-105"
+                            data-alt="Oval shaped plastic food grade containers"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8lZ5hSaw7Y7XbFH9JVClwkZJTwU-dJm1JTN-uzrew-H8WNPLk6g599hQQgmq0HcPB4A0OYlqylS2zTd9pGkRnUo41jMZ475GdWPjmJ4CfXnGuBwnHrzhLbUp8AILCki4xPmJQxnur48nhnSYLGIQitkbfGb18UEM_PRZnsrq6cU7vCCaRnEudnkfFNKQh6hsfsQ_FwZag26FPDGWyEL_TRRsPdaPeVvLEhxefwPnbCpSzlQHVgQ8zC3vkwxUNNKW-fuU_1uHCJSM" />
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold">Oval Premium Series</h4>
+                        <p class="text-[#4c739a] dark:text-slate-400 text-sm mt-2 leading-relaxed">
+                            A sleek, modern silhouette designed for premium spreads, dairy products, or luxury cleaning
+                            waxes.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">Soft
+                                Touch Finish</span>
+                            <span
+                                class="bg-background-light dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-medium border border-[#cfdbe7] dark:border-slate-700">100%
+                                Recyclable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Retail Ready Section -->
+        <section class="bg-primary rounded-3xl p-8 lg:p-16 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+                <span class="material-symbols-outlined text-[300px] -translate-y-10 translate-x-20">inventory_2</span>
+            </div>
+            <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-white/80 text-sm font-bold uppercase tracking-widest">Built for Business</h2>
+                    <h3 class="text-3xl lg:text-5xl font-bold leading-tight">Retail Ready Logistics</h3>
+                    <p class="text-white/80 text-lg leading-relaxed max-w-lg">
+                        Our packaging isn't just about looks—it's engineered for the entire supply chain. From
+                        high-speed filling lines to the consumer's pantry, Taigus packaging ensures integrity and
+                        convenience.
+                    </p>
+                    <ul class="space-y-4 mt-2">
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary bg-white rounded-full p-1 text-sm">check</span>
+                            <span class="font-medium">Optimized Stackability for 15% more pallet space</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary bg-white rounded-full p-1 text-sm">check</span>
+                            <span class="font-medium">Reduced breakage rates during transit</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span
+                                class="material-symbols-outlined text-primary bg-white rounded-full p-1 text-sm">check</span>
+                            <span class="font-medium">Compatible with automated high-speed labeling</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <button
+                            class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-slate-100 transition-colors shadow-lg">
+                            Get Tech Specifications
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div
+                        class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-3xl">layers</span>
+                        <h5 class="font-bold">Stack-Stable</h5>
+                        <p class="text-sm text-white/70">Engineered lid-to-base interlocking system.</p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-3xl">eco</span>
+                        <h5 class="font-bold">Mono-Material</h5>
+                        <p class="text-sm text-white/70">100% PP construction for easy recycling.</p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-3xl">security</span>
+                        <h5 class="font-bold">Safe Seal</h5>
+                        <p class="text-sm text-white/70">Tamper-evident tabs for consumer trust.</p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 flex flex-col gap-3">
+                        <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                        <h5 class="font-bold">Auto-Load</h5>
+                        <p class="text-sm text-white/70">Uniform dimensions for assembly lines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA / Footer-like Section -->
+        <section class="border-t border-[#cfdbe7] dark:border-slate-800 pt-16">
+            <div class="text-center max-w-2xl mx-auto space-y-6">
+                <h3 class="text-3xl font-bold">Ready to transform your FMCG presence?</h3>
+                <p class="text-[#4c739a] dark:text-slate-400">Join over 50+ global brands that trust Taigus for their
+                    premium packaging needs. Let's design your next shelf-hero.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                        class="bg-primary text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:bg-primary/90 transition-all">Start
+                        Your Project</button>
+                    <button
+                        class="bg-white dark:bg-slate-800 border border-[#cfdbe7] dark:border-slate-700 px-8 py-4 rounded-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Browse
+                        Other Industries</button>
+                </div>
+            </div>
+            <div
+                class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-[#cfdbe7] dark:border-slate-800 pt-10 opacity-70">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary">Industries</p>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Food &amp; Dairy</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Paint &amp; Coatings</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Chemicals</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary">Capabilities</p>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">IML Printing</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Injection Molding</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Custom Tooling</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary">Corporate</p>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Sustainability</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Quality Assurance</a>
+                    <a class="text-sm hover:text-primary transition-colors" href="#">Careers</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs font-bold uppercase tracking-widest text-primary">Contact</p>
+                    <p class="text-sm">info@taigus.com</p>
+                    <p class="text-sm">+91 (22) 5550-1234</p>
+                </div>
+            </div>
+            <div class="mt-10 py-6 text-center text-xs text-[#4c739a] dark:text-slate-500">
+                © 2024 Taigus Pvt. Ltd. All rights reserved. | ISO 9001:2015 Certified Manufacturing Facility.
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
