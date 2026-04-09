@@ -774,39 +774,18 @@
         const REPO = "MehulChauhan-07/taigus";   // ← change to your actual GitHub username/repo
         const BRANCH = "main";
 
-        /* ════════════════════════════════════════════════════════════
-           BASE PAGES
-           ─────────────────────────────────────────────────────────────
-           To add a new page:
-             1. Push your .html file to the repo
-             2. Add a new object here in the matching category section
-             3. Push index.html — done!
-           ════════════════════════════════════════════════════════════ */
         const BASE = [
 
-            // ── product page ────────────────────────────────────────────────
-            { url: "designs/product/product-v1.html", title: "Product Page v1", category: "Product", badge: "Product", description: "Detailed product page - first iteration." },
+            // ── Product ────────────────────────────────────────────────
+            { url: "designs/product/catogories/v1.html", title: "Product Categories v1", category: "Product", badge: "Product", description: "Product categories design - version 1." },
+            { url: "designs/product/catogories/v2.html", title: "Product Categories v2", category: "Product", badge: "Product", description: "Product categories design - version 2." },
+            { url: "designs/product/sub-products/sub-product-v1.html", title: "Sub Product v1", category: "Product", badge: "Product", description: "Sub product page design - version 1." },
+            { url: "designs/product/sub-products/sub-product-v2.html", title: "Sub Product v2", category: "Product", badge: "Product", description: "Sub product page design - version 2." },
+            { url: "designs/product/sub-products/sub-product-v3.html", title: "Sub Product v3", category: "Product", badge: "Product", description: "Sub product page design - version 3." },
+            { url: "designs/product/sub-products/<!DOCTYPE html>.html", title: "Sub Product Draft", category: "Product", badge: "Product", description: "Draft sub product HTML file." },
 
-            // // ── Landing Pages ──────────────────────────────────────────
-            // { url: "designs/landing/landing-v1.html", title: "Landing Page v1", category: "Landing Pages", badge: "Landing", description: "First landing page concept — initial layout and structure." },
-            // { url: "designs/landing/landing-v2.html", title: "Landing Page v2", category: "Landing Pages", badge: "Landing", description: "Revised layout with updated typographic hierarchy." },
-
-            // // ── Registration ───────────────────────────────────────────
-            // { url: "designs/registration/reg-v1.html", title: "Registration Form v1", category: "Registration", badge: "Reg", description: "Main enrollment registration form — first version." },
-            // { url: "designs/registration/reg-v2.html", title: "Registration Form v2", category: "Registration", badge: "Reg", description: "Improved registration flow with validation states." },
-
-            // // ── Payment ────────────────────────────────────────────────
-            // { url: "designs/payment/payment-v1.html", title: "Payment Page v1", category: "Payment", badge: "Payment", description: "Secure checkout and payment page — first iteration." },
-
-
-            // // ── Components ─────────────────────────────────────────────
-            // { url: "designs/components/header-footer-v1.html", title: "Header & Footer v1", category: "Components", badge: "Component", description: "Shared header and footer layout used across all pages." },
-
-            // // ── About ──────────────────────────────────────────────────
-            // { url: "designs/about/about-v1.html", title: "About Us v1", category: "About", badge: "About", description: "Company profile and team information — first design." },
-
-            // ── Other ──────────────────────────────────────────────────
-            { url: "designs/other/404.html", title: "404 Page", category: "Other", badge: "Other", description: "Custom 404 not found error page." },
+            // ── Trust Authority ───────────────────────────────────────
+            { url: "designs/trust-authority/infrastructure/v1.html", title: "Infrastructure v1", category: "Trust Authority", badge: "Trust", description: "Trust authority infrastructure page - version 1." },
 
         ];
 
@@ -877,18 +856,20 @@
 
             filtered.forEach((p, i) => {
                 const cls = BADGE_CLS[p.category] || "b-other";
+                const pageUrl = encodeURI(p.url);
+                const sourceUrl = ghUrl(encodeURI(p.url));
                 const card = document.createElement("div");
                 card.className = "card card-in";
                 card.style.animationDelay = `${i * 0.045}s`;
                 card.innerHTML = `
         <div class="prev-wrap">
-          <iframe src="${p.url}" class="prev-iframe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
+                    <iframe src="${pageUrl}" class="prev-iframe" scrolling="no" tabindex="-1" loading="lazy"></iframe>
           <div class="prev-overlay">
-            <a href="${p.url}" class="ov-btn" target="_blank">
+                        <a href="${pageUrl}" class="ov-btn" target="_blank">
               <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               Open Page
             </a>
-            <a href="${ghUrl(p.url)}" class="ov-btn code" target="_blank">
+                        <a href="${sourceUrl}" class="ov-btn code" target="_blank">
               <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
               View Code
             </a>
@@ -902,7 +883,7 @@
           <p class="card-desc">${p.description || "No description."}</p>
           <div class="card-foot">
             <span class="card-path" title="${p.url}">${p.url}</span>
-            <a href="${p.url}" target="_blank" class="card-arrow">
+                        <a href="${pageUrl}" target="_blank" class="card-arrow">
               <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>

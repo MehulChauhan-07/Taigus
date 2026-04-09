@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Infrastructure &amp; Technology - Taigus</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-100 font-display overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+        <div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-[1280px]">
+            <div class="flex items-center gap-4 text-[#0d141b] dark:text-white">
+                <div class="size-8 text-primary">
+                    <span class="material-symbols-outlined text-3xl">hexagon</span>
+                </div>
+                <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Taigus</h2>
+            </div>
+            <div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Products</a>
+                    <a class="text-primary text-sm font-bold leading-normal" href="#">Infrastructure</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+                </nav>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                    <span class="truncate">Request Quote</span>
+                </button>
+            </div>
+            <div class="lg:hidden text-[#0d141b] dark:text-white">
+                <span class="material-symbols-outlined cursor-pointer">menu</span>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <div class="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+            data-alt="Wide cinematic shot of a clean modern factory floor with high tech machinery"
+            style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCl6hsxc7tFx4wgx44ueyzQsAnzQDmMKXMhndmx_yXdL5fbiTv-DUoN-n1oyv2OugiAw6TN4pGJrOvk4Bj87_d0PUZ0PICMx8U1IF0ShrN94INf0W5LqG-AGotKlcnbc7O7D4QVw-oaCu3Yc0lc9mozamNnE80fUFm7sXSUDZu8b1ywC9Xwk644IFrbDmQfMKSNLgftVGVigRUQZSMfClw4lMnhVeEPjeXLsnSdx4VhxQHDlCjzO6P0C-BPGfWEL_eXUe3etOSefBQ");'>
+        </div>
+        <div class="relative z-10 container mx-auto px-4 text-center max-w-[960px]">
+            <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow-sm">
+                Precision Engineering at Scale
+            </h1>
+            <p
+                class="text-slate-100 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-8 drop-shadow-sm">
+                Explore our state-of-the-art manufacturing facility in Bavla, where advanced robotics meet master
+                craftsmanship in IML packaging.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="flex items-center justify-center gap-2 rounded-lg h-12 px-8 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg hover:shadow-primary/30">
+                    <span class="material-symbols-outlined text-[20px]">play_circle</span>
+                    <span>Watch Facility Video</span>
+                </button>
+                <button
+                    class="flex items-center justify-center gap-2 rounded-lg h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-base font-bold transition-all">
+                    <span>Virtual Tour</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Section -->
+    <section class="py-12 bg-white dark:bg-background-dark border-b border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-4 max-w-[1280px]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
+                <h2 class="text-[#0d141b] dark:text-white text-2xl md:text-3xl font-bold leading-tight">Facility
+                    Overview &amp; Capacity</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-md text-sm md:text-base">
+                    Our Bavla facility is designed for high-volume efficiency without compromising on the micron-level
+                    precision required for IML.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700">
+                    <div class="p-2 bg-primary/10 rounded-lg w-fit mb-2">
+                        <span class="material-symbols-outlined text-primary">factory</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Production Area</p>
+                    <p class="text-[#0d141b] dark:text-white text-2xl md:text-3xl font-bold">50,000 <span
+                            class="text-base font-medium text-slate-400">sq ft</span></p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700">
+                    <div class="p-2 bg-primary/10 rounded-lg w-fit mb-2">
+                        <span class="material-symbols-outlined text-primary">inventory_2</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Daily Output</p>
+                    <p class="text-[#0d141b] dark:text-white text-2xl md:text-3xl font-bold">1M+ <span
+                            class="text-base font-medium text-slate-400">Units</span></p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700">
+                    <div class="p-2 bg-primary/10 rounded-lg w-fit mb-2">
+                        <span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Machinery Units</p>
+                    <p class="text-[#0d141b] dark:text-white text-2xl md:text-3xl font-bold">25+</p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 rounded-xl p-6 bg-background-light dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700">
+                    <div class="p-2 bg-primary/10 rounded-lg w-fit mb-2">
+                        <span class="material-symbols-outlined text-primary">verified</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Quality Standard</p>
+                    <p class="text-[#0d141b] dark:text-white text-2xl md:text-3xl font-bold">ISO 9001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Split Feature: Infrastructure -->
+    <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+        <div class="container mx-auto px-4 max-w-[1280px]">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-2xl">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Detail shot of a robotic arm inside a clean manufacturing facility"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSLqfEW_hDT8ZaQrR6XvFd9YqRrBI_ZIxfXyvXrp-zZW1nR799p0LnevIbOGriEhhvvBIhbRVL4SQ6ao3zcGr1Qar9YooGZGKxqyQiciOmZKF7tNyDmkmCuePx-xG8UtURsjVAbhU_BddAvXI9nLh_eZZgIuLHTM0s46WuWv9Lt4Ui8Zm9buirIcV0OA5GVpvIzapEhAcU-z4X9_fkZibC54SUtTbUZ3-z6KIPWkBQp1r5PC0HMrLYfqp7vsupQASVO9Pcbn8FS3Y");'>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+                        <span class="material-symbols-outlined text-sm">engineering</span> Infrastructure
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#0d141b] dark:text-white leading-tight">
+                        Built for <span class="text-primary">Cleanliness</span> &amp; Precision
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                        Our facility in Bavla adheres to global manufacturing standards. We maintain a controlled
+                        environment to ensure that every packaging unit is free from contamination, making our products
+                        ideal for food and dairy industries.
+                    </p>
+                    <ul class="flex flex-col gap-3 mt-2">
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Dust-free molding zones</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>Automated material handling systems</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700 dark:text-slate-200">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span>24/7 Temperature and humidity monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Machinery Showcase -->
+    <section class="py-16 md:py-24 bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-4 max-w-[1280px]">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0d141b] dark:text-white mb-4">Advanced Machinery</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-lg">
+                    We invest in top-tier European and Japanese technology to deliver consistent wall thickness,
+                    superior finish, and rapid cycle times.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="group bg-background-light dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-100 dark:border-slate-700 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center relative"
+                        data-alt="Close up of a heavy industrial injection molding machine"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHXqfvIPSSvPbmgQ5uo6Q4thMc-FMOQEaFy1Q3RcqjijhaJLDfcEzW1-95zeB-uiRT4kSykENF-VA_GmPIHGQNgZrZ1j-UmT5aySqCA3vgk0BSfbrw1f0iju4vMhaJEZWNMoTX05qv1fhB1Lv8II_HP8RHOZ3cOuwchzUUAxceEk_IlCPRYcwjzLaapmfjD7ZERaaA9r-t7hkOD0RJ535r0syQ-pY7OkanQV5kRBP40xiECrJkhxC-wIVLaiYCbGUKLysqloF5Bt0");'>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white mb-3">Injection Molding Units</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">High-tonnage electric machines
+                            ensuring precise pressure control and energy efficiency.</p>
+                        <div class="border-t border-gray-200 dark:border-slate-700 pt-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-500 dark:text-slate-400">Clamping Force</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">180T - 450T</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 dark:text-slate-400">Brand</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">Sumitomo / Toshiba</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="group bg-background-light dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-100 dark:border-slate-700 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center relative" data-alt="Robotic arm placing labels into a mold"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu6cnIXLHv_MQCm0Eijd7U8JDUwOBBkfvpT8ywAqC9dVvDVcJ6hv6pyRNf2xH0DQkLEU6FTaJxdE-uregQADAeMHM_-74nUWxaXhdC224dwW4FL2IiJAgU5vWAM6zZKPq1WqMwvDTKwri8meJXOkweGaZhlvvc8PIs9nL1cj06ondkGPje_rlDC9zGT2TMci-kWbeqylnsptAaAPu33h9h6pO6PjZmjdN3rKx6kZax1lJ5dkrlvVWzSA8X24AKs5ke834v7JVi7Ig");'>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white mb-3">IML Robotics</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Side-entry robots for ultra-fast
+                            label placement and product takeout with sub-second precision.</p>
+                        <div class="border-t border-gray-200 dark:border-slate-700 pt-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-500 dark:text-slate-400">Cycle Time</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">&lt; 5 Seconds</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 dark:text-slate-400">Accuracy</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">+/- 0.1mm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="group bg-background-light dark:bg-slate-800 rounded-xl overflow-hidden border border-gray-100 dark:border-slate-700 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
+                    <div class="h-56 bg-cover bg-center relative"
+                        data-alt="Laboratory technician looking into a microscope"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0jCuFszWGqcgJ6ZibbCWd8aZh6lhWTqHxvntvVRZPgjWQMS_gYuLuCFnfpQxRaG7bWa2mL1ayzxH46K9b7vsRcIZfKdhJsnvbmr4-XYOcQjc79r5UgpJLP0ti2YChS3BuHkUglVxVkzYcWUHMXk3uaTa4S2CfxEX9vUfjA4HNhSHo5FQlD3V7ga7kzEYWr_mKc2bCpwbDS7MepauJlG_S6XP-ZXU2dp9NnyVSltARATTj8cz_Wph1fUZOCUVzGQLlsKNJI6jW6vI");'>
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white mb-3">Quality Control Labs</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">In-house testing facility for drop
+                            tests, load bearing capacity, and leak proofing.</p>
+                        <div class="border-t border-gray-200 dark:border-slate-700 pt-4">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-500 dark:text-slate-400">Standards</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">ISO / ASTM</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500 dark:text-slate-400">Equipment</span>
+                                <span class="font-semibold text-slate-900 dark:text-slate-200">CMM / Vision
+                                    Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Manufacturing Process -->
+    <section class="py-16 md:py-24 bg-slate-900 dark:bg-black text-white overflow-hidden relative">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none"
+            style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="container mx-auto px-4 max-w-[1280px] relative z-10">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The IML Manufacturing Process</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">From concept to carton, our integrated process ensures
+                    seamless execution.</p>
+            </div>
+            <div class="relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-1 bg-slate-700">
+                    <div class="h-full bg-gradient-to-r from-primary to-blue-400 w-3/4"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col lg:items-center gap-4">
+                        <div
+                            class="flex items-center justify-center size-24 rounded-full bg-slate-800 border-4 border-primary shadow-[0_0_20px_rgba(19,127,236,0.5)] z-10">
+                            <span class="material-symbols-outlined text-4xl text-white">design_services</span>
+                        </div>
+                        <div class="lg:text-center">
+                            <h3 class="text-xl font-bold mb-2">1. Mold &amp; Label Design</h3>
+                            <p class="text-slate-400 text-sm">Collaboration with clients to create ergonomic container
+                                shapes and high-impact label graphics.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col lg:items-center gap-4">
+                        <div
+                            class="flex items-center justify-center size-24 rounded-full bg-slate-800 border-4 border-primary z-10">
+                            <span class="material-symbols-outlined text-4xl text-white">smart_toy</span>
+                        </div>
+                        <div class="lg:text-center">
+                            <h3 class="text-xl font-bold mb-2">2. Robotic Labeling</h3>
+                            <p class="text-slate-400 text-sm">Static charging of labels and precise placement into the
+                                mold cavity via high-speed robots.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col lg:items-center gap-4">
+                        <div
+                            class="flex items-center justify-center size-24 rounded-full bg-slate-800 border-4 border-primary z-10">
+                            <span class="material-symbols-outlined text-4xl text-white">local_fire_department</span>
+                        </div>
+                        <div class="lg:text-center">
+                            <h3 class="text-xl font-bold mb-2">3. Fusion &amp; Molding</h3>
+                            <p class="text-slate-400 text-sm">Molten plastic is injected, fusing instantly with the
+                                label to create a single, durable unit.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col lg:items-center gap-4">
+                        <div
+                            class="flex items-center justify-center size-24 rounded-full bg-slate-800 border-4 border-slate-600 z-10">
+                            <span class="material-symbols-outlined text-4xl text-slate-300">inventory</span>
+                        </div>
+                        <div class="lg:text-center">
+                            <h3 class="text-xl font-bold mb-2 text-slate-300">4. QC &amp; Packing</h3>
+                            <p class="text-slate-500 text-sm">Automated vision inspection followed by dust-free packing
+                                and palletization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Split Feature: Automation (Inverted) -->
+    <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark overflow-hidden">
+        <div class="container mx-auto px-4 max-w-[1280px]">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500">
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-2xl">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Rows of finished IML containers on a conveyor belt"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLXTzfX6mVCRM1wK8rHCURPF6vtUVOcO3R6gBfcwnaoSfLWveimFbilx8AU0hhvOUFMrIivyy02zAyGnO-58UpnUZpm2GDgOECXlPI7Pjx3vAMrgUcrPPsya91YPBM84atL95qJpUZnrVxAo7RjGEYDO-R1BVP0Igx7cHOS2w6F2obB2vAGyQN8uFfV5A0eFj_w-2p7OX6lecpC2OYd_0_7pk4q9D8MScuVxeMViXjA14u3-nwNRKNwto4WA1gMhHJOVlKuirGgUk");'>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col gap-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+                        <span class="material-symbols-outlined text-sm">settings_suggest</span> Efficiency
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#0d141b] dark:text-white leading-tight">
+                        Automation &amp; <span class="text-primary">Scalability</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+                        We don't just make packaging; we engineer reliability. Our automated workflows minimize human
+                        error and allow us to scale production rapidly to meet seasonal demands.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="text-2xl font-bold text-slate-900 dark:text-white">99.8%</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">On-time Delivery</p>
+                        </div>
+                        <div class="border-l-4 border-primary pl-4">
+                            <p class="text-2xl font-bold text-slate-900 dark:text-white">&lt;0.5%</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Rejection Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-white text-3xl md:text-5xl font-black mb-6">Experience Precision Firsthand</h2>
+            <p class="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                We invite prospective clients to tour our Bavla facility and witness our IML technology in action.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-white text-primary hover:bg-slate-100 font-bold py-3 px-8 rounded-lg shadow-lg transition-transform hover:-translate-y-1">
+                    Book a Plant Visit
+                </button>
+                <button
+                    class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg transition-transform hover:-translate-y-1">
+                    Contact Sales Team
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer
+        class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-4 max-w-[1280px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 text-[#0d141b] dark:text-white">
+                        <div class="size-6 text-primary">
+                            <span class="material-symbols-outlined text-2xl">hexagon</span>
+                        </div>
+                        <h2 class="text-lg font-bold">Taigus</h2>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Leading manufacturer of IML packaging solutions. Delivering excellence through technology and
+                        innovation since 2010.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-[#0d141b] dark:text-white font-bold text-sm uppercase tracking-wider">Quick Links
+                    </h3>
+                    <div class="flex flex-col gap-2">
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Products</a>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                            href="#">Infrastructure</a>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                            href="#">Sustainability</a>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Careers</a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-[#0d141b] dark:text-white font-bold text-sm uppercase tracking-wider">Contact</h3>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-3 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                            <span>Plot No. 124, GIDC Bavla,<br />Ahmedabad, Gujarat 382220</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-base">call</span>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-500 dark:text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-base">mail</span>
+                            <span>info@taigus.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-[#0d141b] dark:text-white font-bold text-sm uppercase tracking-wider">Certifications
+                    </h3>
+                    <div class="flex gap-4">
+                        <div
+                            class="bg-white dark:bg-slate-800 p-2 rounded border border-gray-200 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-3xl text-slate-400">workspace_premium</span>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-2 rounded border border-gray-200 dark:border-slate-700">
+                            <span class="material-symbols-outlined text-3xl text-slate-400">verified_user</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-400 text-sm">© 2026 Taigus Pvt. Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="text-slate-400 hover:text-primary text-sm" href="#">Privacy Policy</a>
+                    <a class="text-slate-400 hover:text-primary text-sm" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
