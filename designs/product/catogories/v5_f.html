@@ -97,6 +97,171 @@
         .text-editorial {
             letter-spacing: -0.02em;
         }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* FIX: Define ghost-border (was used throughout but never defined) */
+        .ghost-border {
+            border: 1px solid rgba(196, 198, 212, 0.2);
+        }
+
+        /* Refined card hover */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px rgba(0, 29, 89, 0.12);
+        }
+
+        /* Hero parallax shimmer */
+        .hero-shimmer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        /* Smooth details accordion */
+        details summary {
+            user-select: none;
+        }
+
+        details[open] summary .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expand-icon {
+            transition: transform 0.25s ease;
+        }
+
+        /* Accent line for series nav */
+        .series-nav-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #006d33;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+
+        .series-nav-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Tag pill */
+        .tag-pill {
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 99px;
+        }
+
+        /* Sticky nav scroll indicator */
+        #scroll-progress {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            height: 3px;
+            background: #006d33;
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* App card hover arrow */
+        .app-card:hover .arrow-fwd {
+            transform: translateX(4px);
+        }
+
+        .arrow-fwd {
+            transition: transform 0.2s ease;
+        }
+
+        /* Form focus states */
+        .form-field:focus {
+            outline: none;
+            ring: 2px solid #001d59;
+        }
+
+        /* Grayscale hover on series cards */
+        .series-img-card img {
+            filter: grayscale(60%);
+            transition: filter 0.5s ease, transform 0.6s ease;
+        }
+
+        .series-img-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.06);
+        }
+
+        /* Badge pulse */
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .pulse-dot {
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        /* Staggered fade-in on load */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .fade-up-1 {
+            animation-delay: 0.1s;
+            opacity: 0;
+        }
+
+        .fade-up-2 {
+            animation-delay: 0.25s;
+            opacity: 0;
+        }
+
+        .fade-up-3 {
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+
+        .fade-up-4 {
+            animation-delay: 0.55s;
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -211,6 +376,163 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <!-- ═══════════════════════════════════════════
+             PRODUCT SHOWCASE — Fixed cards, consistent specs
+        ════════════════════════════════════════════ -->
+        <section class="py-24 px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+                <div>
+                    <span class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-2 block">Featured
+                        Products</span>
+                    <h2 class="font-serif-display text-4xl font-normal text-primary">Product Showcase</h2>
+                </div>
+                <p class="text-on-surface-variant text-sm max-w-xs">Explore our most popular IML containers, available
+                    in-stock for rapid fulfillment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Product Card 1: RC-1000 -->
+                <div class="product-card bg-surface-container-lowest rounded-3xl overflow-hidden ghost-border">
+                    <div class="aspect-[4/3] bg-surface-container relative overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="1000ml Round IML container with blue lid"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADxdf-uxEhJclE0kfgqNrEPTqxszHEhezt5Rht0zlaPkCjj4uxZNK4gKfHUsx8wGKGDDpUI-C-Q4-nXbMZUeB6qmo-VrWhc3pbcM_NYv-Rr9TyTDwUhd3Mw5zpjRTedXDCM6hO29bwtZxK23ZZ9O2dt9l3pl6kHQ-Bm35IQHOSKkgwbmvnSWgQMQzHArHg0ePw5d08Mnuy4kqhzRWs7YOqo2zqAmjESm35ozmnrogK54WWvEd4dPSC7myLLpNwPKXUpRQokYtzOms" />
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="tag-pill bg-primary text-white">RC-1000</span>
+                            <span class="tag-pill bg-secondary text-white">In Stock</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-serif-display text-2xl font-normal text-primary mb-1">1000ml Round Snap</h3>
+                        <p class="text-on-surface-variant text-sm mb-5">Ideal for bulk dairy, ready-to-eat meals, and
+                            protein powders with handle grip.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Capacity</span><span
+                                    class="font-semibold">1000ml</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Shape</span><span
+                                    class="font-semibold">Round</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Closure</span><span class="font-semibold">Snap
+                                    Fit</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2">
+                                <span class="text-on-surface-variant">Feature</span><span class="font-semibold">Handle +
+                                    Tamper Tab</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                            <a href="#contact-form" class="flex-1">
+                                <button
+                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    Quote</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: ST-500 — FIX: was labeled "500ml Square" but ST series starts at 770ml; corrected to ST-770 -->
+                <div class="product-card bg-surface-container-lowest rounded-3xl overflow-hidden ghost-border">
+                    <div class="aspect-[4/3] bg-surface-container relative overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="Square plastic food container with green lid"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHazLtEGF6g1N_gqIUe_f6Wx-XJUsqsBGjH3ari_C5FSEpP4_7G-SDehn1QyHUb18t7Oeruc8Y2REp7a8avBDq748HA9L4rIO8-amULOUdXllFS0CeiKucvN2lHXxV0fqycIPFgiWdLHzQr2bIz81pTZTZlTNnU8ioxAION8Q7gU4asiB0kwNQ9WHJfmjItLBAFrfwRoQmHGPdfxHa-bzUbDTG1EdH8nnFXP9jUAYKvM1WuULnIIPkyegARVWt_r12-14aiaHmnfw" />
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="tag-pill bg-primary text-white">ST-770</span>
+                            <span class="tag-pill bg-secondary text-white">In Stock</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-serif-display text-2xl font-normal text-primary mb-1">770ml Square Snap</h3>
+                        <p class="text-on-surface-variant text-sm mb-5">Space-efficient square geometry for
+                            shelf-optimised dairy, ghee, and spreads.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Capacity</span><span
+                                    class="font-semibold">770ml</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Shape</span><span
+                                    class="font-semibold">Square</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Closure</span><span class="font-semibold">Snap
+                                    Fit</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2">
+                                <span class="text-on-surface-variant">Feature</span><span
+                                    class="font-semibold">Stackable Design</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                            <a href="#contact-form" class="flex-1">
+                                <button
+                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    Quote</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: SRT-2000 -->
+                <div class="product-card bg-surface-container-lowest rounded-3xl overflow-hidden ghost-border">
+                    <div class="aspect-[4/3] bg-surface-container relative overflow-hidden">
+                        <img class="w-full h-full object-cover"
+                            alt="2000ml protein powder container with heavy-duty twist lock lid"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAZjbB7R2UYAPT42cQJvnLLIKMB36FyDcc3jB356WjeBfnrL77uUgZF4iRiw-nRu2kDQjlbE8r-kCWry0jrRYAaBdwL__wah9AeECJ0G85NouylYUQrXrde7LJxUbHEv-aAxtbaaP4eRmVI1h4YzZbnXPROsEhVKW905P_IESESgvdYfXCgNTp7Tx7DJ4_-yxPG7tKSFHaMS-Tq9RD1i2QPyaVUt3xDDYcxDc_1GmDlC55f7z1fDTaTFiU_6pz4IRE0T9a9aPc7CY" />
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="tag-pill bg-primary text-white">SRT-2000</span>
+                            <span class="tag-pill bg-tertiary-container text-tertiary-fixed">Custom</span>
+                        </div>
+                    </div>
+                    <div class="p-7">
+                        <h3 class="font-serif-display text-2xl font-normal text-primary mb-1">2000ml Twist Pack</h3>
+                        <p class="text-on-surface-variant text-sm mb-5">Industrial-grade twist-lock for protein powders,
+                            supplements, and dry goods.</p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Capacity</span><span
+                                    class="font-semibold">2000ml</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Shape</span><span class="font-semibold">Round
+                                    Twist</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2 border-b border-surface-container">
+                                <span class="text-on-surface-variant">Closure</span><span class="font-semibold">Twist
+                                    Lock</span>
+                            </div>
+                            <div class="flex justify-between text-sm py-2">
+                                <span class="text-on-surface-variant">Feature</span><span class="font-semibold">Safety
+                                    Lock + Induction Seal</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+                            <a href="#contact-form" class="flex-1">
+                                <button
+                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    Quote</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-12 text-center">
+                <button
+                    class="bg-primary text-white px-10 py-4 rounded-full font-bold text-sm hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/20 transition-all">
+                    View All 11 Product SKUs →
+                </button>
             </div>
         </section>
         <!-- Product Highlights Grid -->
@@ -435,7 +757,9 @@
             <div class="container mx-auto px-8 max-w-screen-2xl relative z-10">
                 <div class="flex flex-col md:flex-row items-center gap-16">
                     <div class="flex-1">
-                        <span class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Selection Guide</span>
+                        <span
+                            class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Selection
+                            Guide</span>
                         <h2 class="text-editorial text-4xl font-bold mb-8">Not Sure Which Container Is Best?</h2>
                         <p class="text-primary-fixed text-lg mb-10 leading-relaxed">
                             Our technical team can help you select the ideal series based on your filling machinery,
@@ -449,15 +773,18 @@
                         <h3 class="text-xl font-bold mb-8">Recommended Series</h3>
                         <ul class="space-y-6">
                             <li class="flex items-center gap-4">
-                                <span class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
+                                <span
+                                    class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
                                 <span class="font-medium">High Viscosity Products → RC &amp; OC Series</span>
                             </li>
                             <li class="flex items-center gap-4">
-                                <span class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
+                                <span
+                                    class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
                                 <span class="font-medium">Bulk Stackability → ST Series</span>
                             </li>
                             <li class="flex items-center gap-4">
-                                <span class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
+                                <span
+                                    class="material-symbols-outlined text-secondary-fixed-dim bg-white/5 p-2 rounded-full">check_circle</span>
                                 <span class="font-medium">Threaded Closure Needs → SRT Series</span>
                             </li>
                         </ul>
