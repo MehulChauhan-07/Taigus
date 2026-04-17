@@ -21,53 +21,59 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface": "#f6faff",
-                        "primary-container": "#003087",
-                        "secondary-container": "#75f999",
-                        "on-secondary-fixed": "#00210b",
-                        "outline-variant": "#c4c6d4",
-                        "inverse-on-surface": "#e5f2ff",
-                        "surface-tint": "#3959b0",
-                        "on-primary-container": "#7f9df8",
-                        "primary": "#001d59",
-                        "primary-fixed": "#dbe1ff",
-                        "background": "#f6faff",
-                        "on-primary-fixed": "#00174b",
-                        "surface-dim": "#c2ddf5",
-                        "tertiary-container": "#642200",
-                        "on-surface-variant": "#444652",
-                        "on-background": "#001e2f",
-                        "on-error-container": "#93000a",
-                        "surface-container-low": "#ebf5ff",
-                        "on-error": "#ffffff",
-                        "on-tertiary-container": "#ff793b",
-                        "surface-container": "#e0f0ff",
-                        "on-secondary-container": "#007236",
-                        "surface-variant": "#cbe6fd",
-                        "on-tertiary-fixed-variant": "#7e2c00",
-                        "error": "#ba1a1a",
-                        "surface-bright": "#f6faff",
-                        "surface-container-high": "#d4ebff",
-                        "inverse-surface": "#183345",
-                        "secondary-fixed-dim": "#5adf82",
-                        "on-surface": "#001e2f",
-                        "inverse-primary": "#b4c5ff",
-                        "secondary-fixed": "#78fc9c",
-                        "tertiary": "#411300",
+                        /* ── Taigus Brand Palette ── */
+                        "surface": "#f5f7fc",
+                        /* primary = Deep Blue */
+                        "primary":              "#255499",
+                        "primary-container":    "#173E7B",
+                        "on-primary":           "#ffffff",
+                        "on-primary-container": "#31B6D9",
+                        "primary-fixed":        "#dbe6ff",
+                        "primary-fixed-dim":    "#b3c8f5",
+                        "on-primary-fixed":     "#0d2a5e",
+                        "on-primary-fixed-variant": "#173E7B",
+                        "inverse-primary":      "#90b8ff",
+                        /* secondary = Cyan accent */
+                        "secondary":            "#31B6D9",
+                        "secondary-container":  "#2F8FD4",
+                        "on-secondary":         "#ffffff",
+                        "on-secondary-container": "#0d2a5e",
+                        "secondary-fixed":      "#b8eaf7",
+                        "secondary-fixed-dim":  "#76d3ee",
+                        "on-secondary-fixed":   "#00273a",
+                        "on-secondary-fixed-variant": "#0d5d78",
+                        /* tertiary = Magenta/Coral for CTA accent */
+                        "tertiary":             "#E33B7A",
+                        "tertiary-container":   "#7a0030",
+                        "on-tertiary":          "#ffffff",
+                        "on-tertiary-container":"#F0656A",
+                        "tertiary-fixed":       "#F0656A",
+                        "tertiary-fixed-dim":   "#E33B7A",
+                        "on-tertiary-fixed":    "#ffffff",
+                        "on-tertiary-fixed-variant": "#3d0015",
+                        /* surface tokens */
+                        "background":           "#f5f7fc",
+                        "on-background":        "#292C34",
+                        "surface-dim":          "#dce4f0",
+                        "surface-bright":       "#ffffff",
                         "surface-container-lowest": "#ffffff",
-                        "on-secondary": "#ffffff",
-                        "outline": "#747683",
-                        "primary-fixed-dim": "#b4c5ff",
-                        "on-primary-fixed-variant": "#1c4197",
-                        "tertiary-fixed": "#ffdbcd",
-                        "tertiary-fixed-dim": "#ffb597",
-                        "on-tertiary": "#ffffff",
-                        "secondary": "#006d33",
-                        "on-primary": "#ffffff",
-                        "surface-container-highest": "#cbe6fd",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#360f00",
-                        "on-secondary-fixed-variant": "#005225"
+                        "surface-container-low":    "#edf1f8",
+                        "surface-container":        "#e4eaf5",
+                        "surface-container-high":   "#d8e1f0",
+                        "surface-container-highest":"#cdd7ea",
+                        "surface-variant":      "#d5def0",
+                        "on-surface":           "#292C34",
+                        "on-surface-variant":   "#52617a",
+                        "inverse-surface":      "#1e2330",
+                        "inverse-on-surface":   "#edf1f8",
+                        /* outline */
+                        "outline":              "#8895aa",
+                        "outline-variant":      "#c4cdd9",
+                        /* errors unchanged */
+                        "error":                "#ba1a1a",
+                        "error-container":      "#ffdad6",
+                        "on-error":             "#ffffff",
+                        "on-error-container":   "#93000a"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
@@ -118,7 +124,7 @@
 
         .product-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 24px 48px rgba(0, 29, 89, 0.12);
+            box-shadow: 0 24px 48px rgba(37, 84, 153, 0.15);
         }
 
         /* Hero parallax shimmer */
@@ -151,7 +157,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: #006d33;
+            background: linear-gradient(90deg, #31B6D9, #2F8FD4);
             transform: scaleX(0);
             transition: transform 0.3s ease;
             transform-origin: left;
@@ -177,7 +183,7 @@
             top: 80px;
             left: 0;
             height: 3px;
-            background: #006d33;
+            background: linear-gradient(90deg, #31B6D9, #E33B7A);
             z-index: 100;
             width: 0%;
             transition: width 0.1s linear;
@@ -307,13 +313,14 @@
                 <img class="w-full h-full object-cover"
                     data-alt="vibrant assortment of premium IML plastic containers in various shapes including round, square and twist-pack filled with colorful food items like yogurt, ice cream and snacks in a bright professional kitchen setting"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAXXpwIbxDbQGsEFHl444hG6qOC9OZeiuJ_uzVIi19cxjCq2i3Ryj2qihNCswFTBvMuOsCn08L2zmlSWjFcHz2Gj56tlqGKXhkEl_sQ7IZm46YfOV3tvGx6lZZQavcF-Aeamv_x0rTeEHlM58WXDmoAgVE9inPUD2HXCYeWQCBywzXqrCJJWDMeYXcUbARI20l6SzxJCWraaiB485Ocx4PvNvkLah3J2z2EaoU-F3Mc6mRZkpp2S5NtsUhfZCHOsqZMA4-2kwF9m4" />
-                <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/20"></div>
+                <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(23,62,123,0.92) 0%, rgba(37,84,153,0.6) 50%, rgba(37,84,153,0.15) 100%);"></div>
             </div>
             <div class="relative z-10 max-w-7xl mx-auto px-8 w-full text-white">
                 <div class="max-w-2xl">
                     <span
-                        class="fade-up fade-up-1 inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 text-secondary-fixed font-bold tracking-[0.18em] uppercase text-xs mb-5 px-4 py-2 rounded-full backdrop-blur-sm">
-                        <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed pulse-dot inline-block"></span>
+                        class="fade-up fade-up-1 inline-flex items-center gap-2 border font-bold tracking-[0.18em] uppercase text-xs mb-5 px-4 py-2 rounded-full backdrop-blur-sm"
+                        style="background:rgba(49,182,217,0.15);border-color:rgba(49,182,217,0.4);color:#31B6D9;">
+                        <span class="w-1.5 h-1.5 rounded-full pulse-dot inline-block" style="background:#31B6D9;"></span>
                         Industrial Precision Packaging
                     </span>
                     <h1 class="fade-up fade-up-2 text-5xl md:text-7xl font-extrabold text-editorial mb-6">Premium IML
@@ -328,13 +335,14 @@
                         Crafted using 100% Virgin PP and advanced Japanese machinery at our clinical-grade facility in
                         Gujarat.
                     </p> -->
-                    <p class="fade-up fade-up-3 text-sm text-white/70 mb-10 border-l-4 border-secondary pl-5 py-1">
+                    <p class="fade-up fade-up-3 text-sm text-white/70 mb-10 border-l-4 pl-5 py-1" style="border-color:#31B6D9;">
                         Crafted using 100% Virgin PP on advanced Japanese JSW machinery at our clinical-grade facility
                         in Bavla, Gujarat.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-12">
                         <button
-                            class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-8 py-4 rounded-xl font-bold text-lg hover:scale-95 transition-transform">Request
+                            class="px-8 py-4 rounded-xl font-bold text-lg hover:scale-95 transition-transform text-white"
+                            style="background:linear-gradient(135deg,#E33B7A,#F0656A);box-shadow:0 4px 20px rgba(227,59,122,0.35);">Request
                             Free Samples</button>
                         <button
                             class="border-2 border-white/40 hover:border-white text-white px-8 py-4 rounded-xl font-bold text-lg backdrop-blur-sm transition-all">Download
@@ -344,22 +352,19 @@
                     <div
                         class="fade-up fade-up-4 flex flex-wrap items-center gap-x-8 gap-y-3 pt-8 border-t border-white/15">
                         <div class="flex items-center gap-2.5 opacity-85">
-                            <span
-                                class="material-symbols-outlined text-secondary-fixed text-xl fill-icon">verified</span>
+                            <span class="material-symbols-outlined text-xl fill-icon" style="color:#31B6D9;">verified</span>
                             <span class="text-xs font-bold tracking-widest uppercase text-white/90">ISO 22000</span>
                         </div>
                         <div class="flex items-center gap-2.5 opacity-85">
-                            <span
-                                class="material-symbols-outlined text-secondary-fixed text-xl fill-icon">health_and_safety</span>
+                            <span class="material-symbols-outlined text-xl fill-icon" style="color:#31B6D9;">health_and_safety</span>
                             <span class="text-xs font-bold tracking-widest uppercase text-white/90">GMP Certified</span>
                         </div>
                         <div class="flex items-center gap-2.5 opacity-85">
-                            <span class="material-symbols-outlined text-secondary-fixed text-xl fill-icon">eco</span>
+                            <span class="material-symbols-outlined text-xl fill-icon" style="color:#31B6D9;">eco</span>
                             <span class="text-xs font-bold tracking-widest uppercase text-white/90">Food Grade PP</span>
                         </div>
                         <div class="flex items-center gap-2.5 opacity-85">
-                            <span
-                                class="material-symbols-outlined text-secondary-fixed text-xl fill-icon">location_on</span>
+                            <span class="material-symbols-outlined text-xl fill-icon" style="color:#31B6D9;">location_on</span>
                             <span class="text-xs font-bold tracking-widest uppercase text-white/90">Made in India</span>
                         </div>
                     </div>
@@ -371,7 +376,7 @@
             <div class="container mx-auto px-8 max-w-screen-2xl">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div>
-                        <span class="text-secondary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Precision
+                        <span class="font-bold tracking-[0.2em] uppercase text-sm mb-4 block" style="color:#2F8FD4;">Precision
                             Engineering</span>
                         <h2 class="text-editorial text-4xl font-bold text-primary mb-8">Discover Taigus IML Containers
                         </h2>
@@ -406,25 +411,25 @@
                     <div class="grid grid-cols-2 gap-4">
                         <div
                             class="bg-surface-container-lowest p-8 rounded-2xl ghost-border hover:shadow-lg transition-shadow">
-                            <div class="font-serif-display text-4xl text-secondary mb-1 ">11+</div>
+                            <div class="font-serif-display text-4xl mb-1" style="color:#255499;">11+</div>
                             <div class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Unique Sizes
                             </div>
                         </div>
                         <div
                             class="bg-surface-container-lowest p-8 rounded-2xl ghost-border hover:shadow-lg transition-shadow">
-                            <div class="font-serif-display text-4xl text-secondary mb-1">100%</div>
+                            <div class="font-serif-display text-4xl mb-1" style="color:#31B6D9;">100%</div>
                             <div class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Virgin PP
                             </div>
                         </div>
                         <div
                             class="bg-surface-container-lowest p-8 rounded-2xl ghost-border hover:shadow-lg transition-shadow">
-                            <div class="font-serif-display text-4xl text-secondary mb-1">BPA</div>
+                            <div class="font-serif-display text-4xl mb-1" style="color:#2F8FD4;">BPA</div>
                             <div class="text-xs font-bold uppercase text-on-surface-variant tracking-wider">Free
                                 Materials</div>
                         </div>
-                        <div class="bg-primary p-8 rounded-2xl hover:shadow-lg transition-shadow">
-                            <div class="font-serif-display text-4xl text-secondary-fixed mb-1">IML</div>
-                            <div class="text-xs font-bold uppercase text-white/70 tracking-wider">Tech Leader</div>
+                        <div class="p-8 rounded-2xl hover:shadow-lg transition-shadow" style="background:linear-gradient(135deg,#173E7B,#255499);">
+                            <div class="font-serif-display text-4xl mb-1" style="color:#31B6D9;">IML</div>
+                            <div class="text-xs font-bold uppercase tracking-wider" style="color:rgba(255,255,255,0.7);">Tech Leader</div>
                         </div>
                     </div>
                 </div>
@@ -501,7 +506,7 @@
         <section class="py-24 px-8 max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
                 <div>
-                    <span class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-2 block">Featured
+                    <span class="font-bold tracking-[0.2em] uppercase text-xs mb-2 block" style="color:#2F8FD4;">Featured
                         Products</span>
                     <h2 class="font-serif-display text-4xl font-normal text-primary">Product Showcase</h2>
                 </div>
@@ -525,7 +530,7 @@
                         </div>
                         <div class="absolute top-4 left-4 flex gap-2 z-10">
                             <span class="tag-pill bg-primary text-white">RC-1000</span>
-                            <span class="tag-pill bg-secondary text-white">In Stock</span>
+                            <span class="tag-pill text-white" style="background:#31B6D9;">In Stock</span>
                         </div>
                     </div>
                     <div class="p-7">
@@ -555,7 +560,8 @@
                                 class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
                             <a href="#contact-form" class="flex-1">
                                 <button
-                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    class="w-full py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+                                    style="background:linear-gradient(135deg,#E33B7A,#F0656A);">Get
                                     Quote</button>
                             </a>
                         </div>
@@ -577,7 +583,7 @@
                         </div>
                         <div class="absolute top-4 left-4 flex gap-2 z-10">
                             <span class="tag-pill bg-primary text-white">ST-770</span>
-                            <span class="tag-pill bg-secondary text-white">In Stock</span>
+                            <span class="tag-pill text-white" style="background:#31B6D9;">In Stock</span>
                         </div>
                     </div>
                     <div class="p-7">
@@ -607,7 +613,7 @@
                                 class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
                             <a href="#contact-form" class="flex-1">
                                 <button
-                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    class="w-full py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90" style="background:linear-gradient(135deg,#E33B7A,#F0656A);">Get
                                     Quote</button>
                             </a>
                         </div>
@@ -629,7 +635,7 @@
                         </div>
                         <div class="absolute top-4 left-4 flex gap-2 z-10">
                             <span class="tag-pill bg-primary text-white">SRT-1000</span>
-                            <span class="tag-pill bg-tertiary-container text-tertiary-fixed">Custom</span>
+                            <span class="tag-pill text-white" style="background:#E33B7A;">Custom</span>
                         </div>
                     </div>
                     <div class="p-7">
@@ -659,7 +665,8 @@
                                 class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
                             <a href="#contact-form" class="flex-1">
                                 <button
-                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold text-sm hover:brightness-95 transition-all">Get
+                                    class="w-full py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+                                    style="background:linear-gradient(135deg,#E33B7A,#F0656A);">Get
                                     Quote</button>
                             </a>
                         </div>
@@ -669,7 +676,8 @@
             </div>
             <div class="mt-12 text-center">
                 <button
-                    class="bg-primary text-white px-10 py-4 rounded-full font-bold text-sm hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/20 transition-all">
+                    class="text-white px-10 py-4 rounded-full font-bold text-sm transition-all hover:opacity-90"
+                    style="background:linear-gradient(135deg,#173E7B,#255499);box-shadow:0 4px 20px rgba(37,84,153,0.3);">
                     View All 11 Product SKUs →
                 </button>
             </div>
@@ -696,7 +704,7 @@
                                     class="text-xs font-black bg-primary/10 text-primary px-3 py-1 rounded-full uppercase tracking-tighter">RC-1000</span>
                                 <h3 class="text-2xl font-bold mt-2">1000ml Round Snap</h3>
                             </div>
-                            <span class="text-secondary font-bold">In-Stock</span>
+                            <span class="font-bold" style="color:#31B6D9;">In-Stock</span>
                         </div>
                         <div class="space-y-2 mb-8">
                             <div class="flex justify-between text-sm py-2 border-b border-surface-container">
@@ -717,7 +725,8 @@
                                 class="flex-1 border border-primary text-primary py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-all">View
                                 Details</button>
                             <button
-                                class="flex-1 bg-tertiary-fixed text-on-tertiary-fixed-variant py-3 rounded-xl font-bold">Get
+                                class="flex-1 py-3 rounded-xl font-bold text-white"
+                                style="background:linear-gradient(135deg,#E33B7A,#F0656A);">Get
                                 Quote</button>
                         </div>
                     </div>
@@ -783,7 +792,7 @@
                                     class="text-xs font-black bg-primary/10 text-primary px-3 py-1 rounded-full uppercase tracking-tighter">SRT-2000</span>
                                 <h3 class="text-2xl font-bold mt-2">2000ml Twist Pack</h3>
                             </div>
-                            <span class="text-secondary font-bold">Custom</span>
+                            <span class="font-bold" style="color:#E33B7A;">Custom</span>
                         </div>
                         <div class="space-y-2 mb-8">
                             <div class="flex justify-between text-sm py-2 border-b border-surface-container">
@@ -812,7 +821,8 @@
             </div>
             <div class="mt-16 text-center">
                 <button
-                    class="bg-primary text-white px-12 py-5 rounded-full font-extrabold text-lg hover:shadow-2xl transition-all">View
+                    class="text-white px-12 py-5 rounded-full font-extrabold text-lg transition-all hover:opacity-90"
+                    style="background:linear-gradient(135deg,#173E7B,#255499);box-shadow:0 4px 24px rgba(37,84,153,0.35);">View
                     All 11 Product Categories</button>
             </div>
         </section>
@@ -830,8 +840,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Use Case Cards -->
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #31B6D9;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#31B6D9;"
                         data-icon="ice_cream">icecream</span>
                     <h3 class="text-xl font-bold mb-3">Ice Cream &amp; Frozen Desserts</h3>
                     <p class="text-on-surface-variant mb-6">Thermal-stable containers designed for sub-zero durability
@@ -841,8 +852,9 @@
                         Now <span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #2F8FD4;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#2F8FD4;"
                         data-icon="water_drop">water_drop</span>
                     <h3 class="text-xl font-bold mb-3">Traditional Dairy</h3>
                     <p class="text-on-surface-variant mb-6">Perfect for Ghee, Curd, and Butter with hermetic snap-fit
@@ -852,8 +864,9 @@
                         Now <span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #E33B7A;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#E33B7A;"
                         data-icon="nutrition">nutrition</span>
                     <h3 class="text-xl font-bold mb-3">Spreads &amp; Butters</h3>
                     <p class="text-on-surface-variant mb-6">Wide-mouth designs optimized for easy scooping and
@@ -863,8 +876,9 @@
                         Now <span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #F0656A;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#F0656A;"
                         data-icon="fitness_center">fitness_center</span>
                     <h3 class="text-xl font-bold mb-3">Nutritional Powders</h3>
                     <p class="text-on-surface-variant mb-6">Industrial-grade durability for protein powders and health
@@ -874,8 +888,9 @@
                         Now <span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #255499;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#255499;"
                         data-icon="bakery_dining">bakery_dining</span>
                     <h3 class="text-xl font-bold mb-3">Dry Fruits &amp; Confectionery</h3>
                     <p class="text-on-surface-variant mb-6">Crystal clear visibility and moisture-proof lids for premium
@@ -885,8 +900,9 @@
                         Now <span class="material-symbols-outlined">arrow_forward</span></button>
                 </div>
                 <div
-                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border-l-4 border-secondary group">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-6 block"
+                    class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all group"
+                    style="border-left:4px solid #31B6D9;">
+                    <span class="material-symbols-outlined text-4xl mb-6 block" style="color:#31B6D9;"
                         data-icon="microwave">microwave</span>
                     <h3 class="text-xl font-bold mb-3">Ready Meals</h3>
                     <p class="text-on-surface-variant mb-6">Microwave-safe polymers with tamper-evident tabs for safe
@@ -902,7 +918,7 @@
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
                     <div>
                         <span
-                            class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-2 block">Applications</span>
+                            class="font-bold tracking-[0.2em] uppercase text-xs mb-2 block" style="color:#2F8FD4;">Applications</span>
                         <h2 class="font-serif-display text-4xl font-normal text-on-surface">Find the Perfect
                             Container<br /><em>for Your Product</em></h2>
                     </div>
@@ -919,7 +935,7 @@
                                 alt="Gourmet ice cream in a premium plastic IML tub"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo7q1KbOWXnPMD5r9A1_EutnUVbZ6ucwU_EVDUxJy5Zx2iELPIYcEaA-PbusMEcnOiS89KSw2KFhINhjR2n9L6DljIefQnowstHh1dsOT2FkVDY_PZJR5JgOOJPHMk1Aet6hSb5UI1QSbnnYZtw6LmhdqvNnMCZ-f131u3OKIErS0DWR3lztt7f8iBMDLNafQqHd7LePQ0z99AV7f6dGPfkScuQycp8o3WDZ-pYszJYQjTfQJqC3_mRzXG23uEg25wRHHDeSfGfXg" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #31B6D9;">
                             <h3 class="text-lg font-bold mb-1.5">Ice Cream &amp; Frozen Desserts</h3>
                             <p class="text-on-surface-variant text-sm mb-4">Deep-freeze resistant labels on
                                 impact-resistant PP. Stable to −20°C with no label delamination.</p>
@@ -938,7 +954,7 @@
                                 alt="Fresh yogurt containers with colorful fruit branding"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCoYYJcVxFDjePc9bcziFoe9GTeNICAZxBuqcH3fEfniQHRiKVOyR1zmJf3H-f2ArySnwJeU9cyUfjKobL9HqSJzP3qm27PoG-QbAqVWvPNQVF2W679G13QTjgXozw5Rf93LXKWumwKL09fZz-5PlrRmy5yU1fGGg9wXZWbFhEku7Gu-VTBN2uVgFpu-zBGXhxiaTzaYESczJ-NaWQ64JvkmD3a8AjMzmF33Y5sMjae9jmT-5iybsJ_hm1b53sYkaTR_Xz_F2w_dE" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #2F8FD4;">
                             <h3 class="text-lg font-bold mb-1.5">Traditional Dairy &amp; Yogurt</h3>
                             <p class="text-on-surface-variant text-sm mb-4">Hermetic snap-fit seals for Ghee, Curd, and
                                 Butter. Foil-seal ready rims for extended shelf life.</p>
@@ -957,7 +973,7 @@
                                 alt="Artisanal hummus and dips in white plastic containers"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHYY3x_karOAwo6b5usickiQbsK-B3vyRWHvPoBTJDAo3YnxY2HZt4hXDJffvQyjAGYuPPXX02C97N5RcHKbiUUWg1FiA8gpO_exi7LXg6ReskqsB1czRMSCw7uaFnCDegBim8OuxHE1N9Sqn7o6wVcubhy0M7VCCI5feo6i22sJugSaSxZDRxTrC1g8NIkCDQ4-7nCiTLBFmAwGN2DyY4ja62t6x8l2vUPqkeaNJth1XeO0qf8bgLvS0ssIEaI8vF7F4-j1LtOGk" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #E33B7A;">
                             <h3 class="text-lg font-bold mb-1.5">Spreads, Butters &amp; Dips</h3>
                             <p class="text-on-surface-variant text-sm mb-4">Wide-mouth oval designs (OC series)
                                 optimized for easy scooping and premium shelf presence.</p>
@@ -976,7 +992,7 @@
                                 alt="Protein powder jars in large twist-pack containers"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFAwp2ezUVdKJZKNrHd48Xfg5_8q6DgqS5wo4KWG2iMA95JwMzA42tylfzPVX2dyJvnrNYMA0cw3jxjCh7OLc3PR3bINo_pNju-FwQ8eLv9G0nFUJbKNiHWHENosvWI9WKtKTTwO6YN4H62WVZAej5pl9kXHOSu00bOvapIPXu8J03t808nGwRQF00XDS-YVlaBNLY_z2G0z9bGqzmOmdUDA4cVMNh47xGIGakManD4MX9wY-3UQKyi92McbzTAFLXpLkZP3pJBsw" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #F0656A;">
                             <h3 class="text-lg font-bold mb-1.5">Nutritional Powders &amp; Supplements</h3>
                             <p class="text-on-surface-variant text-sm mb-4">SRT twist-pack series with tamper-evident
                                 induction seals for protein powders and health supplements.</p>
@@ -995,7 +1011,7 @@
                                 alt="Dried nuts and fruits in transparent snap-fit containers"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCerPfHySAlJF3h2391V9HEY9v38eY_gFih-qMIpqJJNtE3llNKn8WUew4cPcMeP3yIVIMULBncg1LJVXr0ZxfexveFwDOUuZTKszWJ3q1x0kzvz1ymZRO-sRtd0JWX1GKTNJWDUZSFcKUsHmdpe1bH0d44VS9gvoBWtHF1mOJnQe8NElB1p0mMrpR4mQjPoEBX2YfhXQvJJCEvN_yAfefDVi8YNo4d7fiJkcUagMbsCu7979FDYC909fheJOuiZXftOmiRY6IGLYQ" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #255499;">
                             <h3 class="text-lg font-bold mb-1.5">Dry Fruits &amp; Confectionery</h3>
                             <p class="text-on-surface-variant text-sm mb-4">Crystal clarity to showcase freshness.
                                 Moisture-proof lids and airtight seals for premium snack brands.</p>
@@ -1014,7 +1030,7 @@
                                 alt="Ready-to-eat pasta meal in a microwaveable IML container"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7nFLWXxuTka6vyZWgB6GCW14zIw1fDfdqygDGLKKWQhyOFuMXtasf_IeWhRFMajM8lnGGCdhGGppFBj_IbV_fNTPXNTKKdyU6fB-9g3xsCHL_WwRReMw4aGGECIX2V7A_Fs9hRrd19ZNEF-T45lubpFknfLyM6KJVpK6YLn5emDKFYexFOYISFUAHkfQA44l4O0P7n2KsYKM_P1MJWbgOquue6m50BJdvYlNrJ3XKnMWU2oXGblhVhKceQMGNGgjKVmR56GXcXMs" />
                         </div>
-                        <div class="p-6 border-l-4 border-secondary">
+                        <div class="p-6" style="border-left:4px solid #31B6D9;">
                             <h3 class="text-lg font-bold mb-1.5">Ready Meals</h3>
                             <p class="text-on-surface-variant text-sm mb-4">Microwave-safe PP polymers with stay-cool
                                 handling zones and tamper-evident tabs for safe delivery.</p>
@@ -1032,7 +1048,7 @@
         <!-- ═══════════════════════════════════════════
              SELECTION GUIDE
         ════════════════════════════════════════════ -->
-        <section class="py-20 bg-primary text-white relative overflow-hidden">
+        <section class="py-20 text-white relative overflow-hidden" style="background:linear-gradient(135deg,#173E7B 0%,#255499 100%);">
             <div class="absolute inset-0 opacity-5">
                 <img alt="Engineer consulting technical drawings" class="w-full h-full object-cover"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVI_GWqXOa5L1F0H4NCuOrjSv58jTVHRraPvjuW_GOrKMH11MipF2HeUwS0cgYDvZoWiXY_2hHISe4H5IFdKYeAS1jPHT4IUNvaXILyJNLXbX6fMnvEeNSqlaYjO-CRMyItaBadYYbWvhQwUC2EYwyN-RnnRAjNfb2eXCtpMi9DaENumovgSobUWUEw_BhFazVZUv3w9U19_OllRGn42H9Dg8lu9At9fHRqMkR-YKl0Y2hvnzYxcVnkYp-wULoY3IHlpdQuWJGY5Q" />
@@ -1051,7 +1067,8 @@
                         </p>
                         <a href="#contact-form">
                             <button
-                                class="bg-secondary text-white px-8 py-3.5 font-bold text-xs uppercase tracking-widest rounded-xl hover:brightness-110 transition-all">Talk
+                                class="text-white px-8 py-3.5 font-bold text-xs uppercase tracking-widest rounded-xl hover:opacity-90 transition-all"
+                                style="background:linear-gradient(135deg,#31B6D9,#2F8FD4);">Talk
                                 to a Packaging Expert</button>
                         </a>
                     </div>
@@ -1107,7 +1124,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex justify-between items-end mb-16">
                     <div>
-                        <span class="label-md uppercase tracking-widest text-primary font-bold">Applications</span>
+                        <span class="label-md uppercase tracking-widest font-bold" style="color:#2F8FD4;">Applications</span>
                         <h2 class="text-4xl font-bold tracking-tighter mt-2">Solutions by Use Case</h2>
                     </div>
                     <p class="text-on-surface-variant max-w-xs text-sm">Optimized geometries and seals for diverse
@@ -1221,7 +1238,7 @@
         <section class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-8">
                 <div class="text-center mb-14">
-                    <span class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Our
+                    <span class="font-bold tracking-[0.2em] uppercase text-xs mb-3 block" style="color:#31B6D9;">Our
                         Range</span>
                     <h2 class="font-serif-display text-4xl font-normal text-primary">Four Container <em>Series</em></h2>
                 </div>
@@ -1234,8 +1251,9 @@
                             alt="Round snap-fit plastic containers stacked"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXudcizLn5b6ECOTFLupF4eE8N421njdZBrQQ84Qe1deRa_ymAnPFL1mRtCtPQeRWg4cAPw8Et2TgFs1f6XQmrO8hIbZyXZq4277TyE5EV9TSW6ceC2wXQAxQRTN7RFtBoPmRYR2NKBS9B0pYgRaUSYBESdV2EWDZFWppN4-GkRURUYf2MvV0HYo4E1pBt2Yi4UQh7yy01bzoAGbhYhI_D1KQRjJi940zYmjrHK-2I68AonxYFi-stqskh8iBvfr2CyHGxWIfAI78" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent p-7 flex flex-col justify-end">
-                            <span class="tag-pill bg-secondary text-white self-start mb-3">RC Series</span>
+                            class="absolute inset-0 p-7 flex flex-col justify-end"
+                            style="background:linear-gradient(to top, rgba(23,62,123,0.92) 0%, rgba(37,84,153,0.3) 60%, transparent 100%);">
+                            <span class="tag-pill self-start mb-3 text-white" style="background:#31B6D9;">RC Series</span>
                             <h4 class="text-white text-2xl font-serif-display font-normal">Round Snap Fit</h4>
                             <p class="text-white/75 text-xs mt-1.5">125ml · 500ml · 1000ml · 2000ml</p>
                             <p class="text-white/60 text-xs mt-2">Versatile, hermetic, with optional handle grip</p>
@@ -1248,8 +1266,9 @@
                             alt="Square plastic food containers with vibrant IML labels"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNCJmVbQQrWI1XMsO1vjwVb4TzzuZUap4Rr08n7MA4HQmPVMdNTr4IxquJDp4PYalGPb8vOZ-DfYJcftHI2RDlIVCYHZNc5D4EvNhRzb-BuPqfyX2G2xLOQTLtBBFcctYmcXCQVWsHyDIhMlShOnSGMfZkNgLziGbdvtnxZgqUBIQDTeRkbgGsp4CBYsyFHeQvk0SVhvVMmuE50GnGEpiY1P8CG45-pAMFn-9tiQG3rX9yBTENCKHbh4iVx195SD8EwF8vPgBlR2c" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent p-7 flex flex-col justify-end">
-                            <span class="tag-pill bg-secondary text-white self-start mb-3">ST Series</span>
+                            class="absolute inset-0 p-7 flex flex-col justify-end"
+                            style="background:linear-gradient(to top, rgba(23,62,123,0.92) 0%, rgba(37,84,153,0.3) 60%, transparent 100%);">
+                            <span class="tag-pill self-start mb-3 text-white" style="background:#2F8FD4;">ST Series</span>
                             <h4 class="text-white text-2xl font-serif-display font-normal">Square Snap Fit</h4>
                             <p class="text-white/75 text-xs mt-1.5">770ml · 1000ml</p>
                             <p class="text-white/60 text-xs mt-2">Space-efficient geometry, stackable by design</p>
@@ -1262,8 +1281,9 @@
                             alt="Premium oval shaped plastic containers for gourmet food"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbCGQuAXr-00DImtjC3bOmuIVCyNd0F_XV8Np4vWTqF0wLb6D6P8At5QOzZrQQBN8efwqG1Q1cjQzFXDFDRUsANp1_Y7mvEfTwfhrtIJuZnCpEJNHQlQlt3ONZqpc1ztPpC-TFlC1b28XJa52epaghX7Es8rhW3Tn3KisT-HXtERfE0V1NV8RurT6QxEq-xFLcrtP4ELcBikHc2XVHlbQnIJWohm6nK8LLbqQreMcAHIRZ27IBpwzLuFsSQs38OEiUv4M1TBsTMFk" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent p-7 flex flex-col justify-end">
-                            <span class="tag-pill bg-secondary text-white self-start mb-3">OC Series</span>
+                            class="absolute inset-0 p-7 flex flex-col justify-end"
+                            style="background:linear-gradient(to top, rgba(23,62,123,0.92) 0%, rgba(37,84,153,0.3) 60%, transparent 100%);">
+                            <span class="tag-pill self-start mb-3 text-white" style="background:#E33B7A;">OC Series</span>
                             <h4 class="text-white text-2xl font-serif-display font-normal">Oval Snap Fit</h4>
                             <p class="text-white/75 text-xs mt-1.5">750ml · 1000ml</p>
                             <p class="text-white/60 text-xs mt-2">Ergonomic oval, maximum front-label visibility</p>
@@ -1276,8 +1296,9 @@
                             alt="Round plastic containers with secure twist-lock lids for protein powders"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-gkT5zYH5zvzzB5B7OplvOFX9mc7-_OXpPcVkCo1LIU-0sUhx4NK2gaCmEokrLfAXrXwYtnN9WMzX6UfWB4bY02dOLLISO6WBE1ss8PaCUdsGGajMvg9rs3KznKxZvs2kYR8ebs3QuYH470sjGGmdynZPITKBGG2Jbv9mxd4wQ9h2nR9aTvHTRjVWq8Hij7r4oqj7hU0yoFGm0D3RyxFR1_B_xML52coRjmb0H8mXdj6zK7zwbu9T-ub3i6qFzdLixJ8_3u3WGHE" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent p-7 flex flex-col justify-end">
-                            <span class="tag-pill bg-secondary text-white self-start mb-3">SRT Series</span>
+                            class="absolute inset-0 p-7 flex flex-col justify-end"
+                            style="background:linear-gradient(to top, rgba(23,62,123,0.92) 0%, rgba(37,84,153,0.3) 60%, transparent 100%);">
+                            <span class="tag-pill self-start mb-3 text-white" style="background:#F0656A;">SRT Series</span>
                             <h4 class="text-white text-2xl font-serif-display font-normal">Twist Pack</h4>
                             <p class="text-white/75 text-xs mt-1.5">1000ml · 2000ml</p>
                             <p class="text-white/60 text-xs mt-2">Threaded twist-lock with induction seal option</p>
@@ -1295,10 +1316,10 @@
                     <img class="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                         data-alt="A stack of white rectangular food containers with blue lids in a clean industrial studio"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTsZjlmDmtlqbzWDD2KisNc-OwkE0ROPMBmSZNSo8VGxBfgLn_pZRwjRH2W0BXYLXwVpsAhqBXU65c-muR1BSqPUnWlCurMXAAQ9sSzRlaoteTKdg72OjLz4nEcqK48Df1zqYQGbSc3y3rmuaZuQbfsfZKk5JBWUzGYtzQPNH4CnsSf4H2IXwzbO_mqGZmtKSE60SLIJR-4AeIQEVxp8kWtOBRISkvVyVp4S_0A4IQD90qKrn-FEs_f0tugHHDnZASRIbzh6ifJDs" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                    <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(23,62,123,0.9) 0%, transparent 100%);"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h4 class="text-3xl font-black text-white mb-2">RC Series</h4>
-                        <p class="text-on-primary-container text-xs font-bold uppercase tracking-widest mb-4">
+                        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:#31B6D9;">
                             Rectangular Classic</p>
                         <p class="text-white/80 text-sm">Versatile and space-efficient rectangular designs for retail
                             shelves.</p>
@@ -1308,10 +1329,10 @@
                     <img class="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                         data-alt="Round plastic tubs for ice cream or yogurt with secure lids on a soft blue background"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUs3oVW0kW5lXgwCaCjIIIbIdBt5wxKD7jRbvVyC7__Tymvw3YOJd1f11qKFIPe1QA62FDzDnDNDoO63oiuz-aHrWhFFf6UIBv8cF6i18NR9eQK0yXU55QuHXzHFxiN84gX3503IE67oBbMwADYEuTsJeZHegbgeFoPMOcGM71TfLCxT9h1BI_QAXiK0_UFxEgkvdEfrnkQJdd_W4sgCou9Y_cWMRPbF24Y93Gx1gco73upa19cW-7-XnuelHt68Vb60znkRTy04M" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                    <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(23,62,123,0.9) 0%, transparent 100%);"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h4 class="text-3xl font-black text-white mb-2">ST Series</h4>
-                        <p class="text-on-primary-container text-xs font-bold uppercase tracking-widest mb-4">Standard
+                        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:#31B6D9;">Standard
                             Tub</p>
                         <p class="text-white/80 text-sm">Classic round containers optimized for high-speed filling
                             lines.</p>
@@ -1321,10 +1342,10 @@
                     <img class="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                         data-alt="Oval shaped clear food containers for specialty deli products"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBwGaquXNt9Lhn37enBGoXVykxtz2t-dOiGImgrc3XiQ62JG5LUoYcNcLLSakRvMYEEx18KLADv80yJx8ghUiDMSR93HIDsgVAHiRJcmu-KK0JOej88K-YdNtV0OGRBSBYkiXPgi1yAEQ8T2PYZ8wpDOD8g6sFeBqOJisPQ-qx9jOUU2ne0s3BE29_5VUwYqTH4wingvpZNNgl4mLTSzPgPz14wCycdP9-m5z8lxX47O5cS5XUvkr0uaYhhuCKS9o3c5pK9H65cns" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                    <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(23,62,123,0.9) 0%, transparent 100%);"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h4 class="text-3xl font-black text-white mb-2">OC Series</h4>
-                        <p class="text-on-primary-container text-xs font-bold uppercase tracking-widest mb-4">Oval
+                        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:#31B6D9;">Oval
                             Comfort</p>
                         <p class="text-white/80 text-sm">Ergonomic oval shapes that maximize front-facing branding
                             areas.</p>
@@ -1334,10 +1355,10 @@
                     <img class="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                         data-alt="Square plastic jars with twist off lids for dry goods and powders"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_sQiY-dIy12BvZOZD96zovR_W6kMtydAzTi45zpFJXeYDGNOAQOF5XZxFnW6Mf50owqjCD2m6GvAYeBwjOJ-6stYsLp2TSwESBP_lCIF8U7aSoCzqKbqQNd9qzaxq5GlvJInW3A_p2B9BHBAwbLltOfHMCZy53lQypylPqDHGhVu7xon0gW5idL__oWU2p552UHMgq7HGtp8vTQ3eiIS0y6zsjNVGXByVl5gYK6Ar4HWN4EsOJ5yfGOtJVnCR4B0PT31Ns_J1W4" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                    <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(23,62,123,0.9) 0%, transparent 100%);"></div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h4 class="text-3xl font-black text-white mb-2">SRT Series</h4>
-                        <p class="text-on-primary-container text-xs font-bold uppercase tracking-widest mb-4">Square
+                        <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:#31B6D9;">Square
                             Round Twist</p>
                         <p class="text-white/80 text-sm">Modern hybrid geometry with secure twist-lock functionality.
                         </p>
@@ -1353,7 +1374,7 @@
             <div class="max-w-7xl mx-auto px-8">
                 <div class="flex items-end justify-between mb-12 border-b border-outline-variant/20 pb-6">
                     <div>
-                        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Round Snap Fit
+                        <span class="font-bold text-xs uppercase tracking-widest" style="color:#31B6D9;">Round Snap Fit
                             Containers</span>
                         <!-- FIX: RC = Round Containers, not "Rectangular Classic" -->
                         <h2 class="font-serif-display text-4xl font-bold text-primary mt-1">RC Series</h2>
@@ -1372,7 +1393,7 @@
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnwrLfmHBfQC3DiB7C_SDAAFk34ewbcgRNiHMdI7Vp8OzM0Ub5I08rf5krQjUrf3EORbe3ZKufBE1MtyZfAQxG2FHDAeyuvgwPKH7AlUgUDr1EU0YnRqRdKr9teEFHwRdVYBVOZ87amz_UBIoCeBxBOeGt46CdZr1xkApZFNok8BtavXo78TdeO0lIRtixyIUyhsJG7oQW0yrVqbK7AIteQ4ZbmNV2rV3TLBnYO-FLQ3RTVY3hRVoV7d-5d0q9hlF0EQk9sGu50Jk" /> -->
                             <div class="absolute top-3 right-3"><span
-                                    class="tag-pill bg-secondary text-white">Popular</span></div>
+                                    class="tag-pill text-white" style="background:#31B6D9;">Popular</span></div>
                         </div>
                         <div class="p-7">
                             <div class="flex items-center justify-between mb-1.5">
@@ -1387,7 +1408,8 @@
                             </div>
                             <a href="#contact-form">
                                 <button
-                                    class="w-full py-3 bg-primary/8 text-primary font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-primary hover:text-white transition-all">Get
+                                    class="w-full py-3 font-bold text-xs uppercase tracking-widest rounded-xl text-primary transition-all hover:text-white"
+                                    style="background:rgba(37,84,153,0.08);" onmouseover="this.style.background='linear-gradient(135deg,#173E7B,#255499)';" onmouseout="this.style.background='rgba(37,84,153,0.08)';">Get
                                     Quote for RC-125</button>
                             </a>
                         </div>
@@ -1417,7 +1439,8 @@
                             </div>
                             <a href="#contact-form">
                                 <button
-                                    class="w-full py-3 bg-primary/8 text-primary font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-primary hover:text-white transition-all">Get
+                                    class="w-full py-3 font-bold text-xs uppercase tracking-widest rounded-xl text-primary transition-all hover:text-white"
+                                    style="background:rgba(37,84,153,0.08);" onmouseover="this.style.background='linear-gradient(135deg,#173E7B,#255499)';" onmouseout="this.style.background='rgba(37,84,153,0.08)';">Get
                                     Quote for RC-500</button>
                             </a>
                         </div>
@@ -1446,7 +1469,8 @@
                             </div>
                             <a href="#contact-form">
                                 <button
-                                    class="w-full py-3 bg-primary/8 text-primary font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-primary hover:text-white transition-all">Get
+                                    class="w-full py-3 font-bold text-xs uppercase tracking-widest rounded-xl text-primary transition-all hover:text-white"
+                                    style="background:rgba(37,84,153,0.08);" onmouseover="this.style.background='linear-gradient(135deg,#173E7B,#255499)';" onmouseout="this.style.background='rgba(37,84,153,0.08)';">Get
                                     Quote for RC-1000</button>
                             </a>
                         </div>
@@ -1465,7 +1489,7 @@
 
                     <!-- ST Series -->
                     <div class="bg-surface-container-lowest p-10 rounded-2xl ghost-border" id="st-series">
-                        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Square Snap Fit</span>
+                        <span class="font-bold text-xs uppercase tracking-widest" style="color:#2F8FD4;">Square Snap Fit</span>
                         <h2 class="font-serif-display text-3xl font-bold text-primary mt-1.5 mb-6">ST Series</h2>
                         <p class="text-on-surface-variant text-sm mb-7">Perfect for shelf-stacking optimisation. The
                             square geometry minimises storage space by up to 25% versus round containers.</p>
@@ -1476,7 +1500,7 @@
                                     <span class="text-on-surface-variant text-xs ml-2">770ml</span>
                                 </div>
                                 <a href="#contact-form"><button
-                                        class="text-secondary font-bold text-xs hover:underline uppercase tracking-wider">Quote</button></a>
+                                        class="font-bold text-xs hover:underline uppercase tracking-wider" style="color:#255499;">Quote</button></a>
                             </div>
                             <div class="flex items-center justify-between py-3.5">
                                 <div>
@@ -1484,7 +1508,7 @@
                                     <span class="text-on-surface-variant text-xs ml-2">1000ml</span>
                                 </div>
                                 <a href="#contact-form"><button
-                                        class="text-secondary font-bold text-xs hover:underline uppercase tracking-wider">Quote</button></a>
+                                        class="font-bold text-xs hover:underline uppercase tracking-wider" style="color:#255499;">Quote</button></a>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2">
@@ -1495,7 +1519,7 @@
 
                     <!-- OC Series -->
                     <div class="bg-surface-container-lowest p-10 rounded-2xl ghost-border" id="oc-series">
-                        <span class="text-secondary font-bold text-xs uppercase tracking-widest">Oval Snap Fit</span>
+                        <span class="font-bold text-xs uppercase tracking-widest" style="color:#E33B7A;">Oval Snap Fit</span>
                         <h2 class="font-serif-display text-3xl font-bold text-primary mt-1.5 mb-6">OC Series</h2>
                         <p class="text-on-surface-variant text-sm mb-7">Ergonomic oval shape that maximises front-facing
                             IML label area. Ideal for spreads, margarine, and specialty dips requiring premium retail
@@ -1525,8 +1549,8 @@
                     </div>
 
                     <!-- SRT Series — FIX: Was completely missing from this section -->
-                    <div class="bg-primary p-10 rounded-2xl text-white" id="srt-series">
-                        <span class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-widest">Twist Pack
+                    <div class="p-10 rounded-2xl text-white" id="srt-series" style="background:linear-gradient(135deg,#173E7B,#255499);">
+                        <span class="font-bold text-xs uppercase tracking-widest" style="color:#31B6D9;">Twist Pack
                             Series</span>
                         <h2 class="font-serif-display text-3xl font-bold text-white mt-1.5 mb-6">SRT Series</h2>
                         <p class="text-white/75 text-sm mb-7">Modern hybrid geometry with secure threaded twist-lock
@@ -1538,7 +1562,7 @@
                                     <span class="text-white/60 text-xs ml-2">1000ml</span>
                                 </div>
                                 <a href="#contact-form"><button
-                                        class="text-secondary-fixed-dim font-bold text-xs hover:underline uppercase tracking-wider">Quote</button></a>
+                                        class="font-bold text-xs hover:underline uppercase tracking-wider" style="color:#31B6D9;">Quote</button></a>
                             </div>
                             <div class="flex items-center justify-between py-3.5">
                                 <div>
@@ -1563,21 +1587,21 @@
         <!-- ═══════════════════════════════════════════
              THE TAIGUS ADVANTAGE-  Why Choose Taigus
         ════════════════════════════════════════════ -->
-        <section class="py-24 bg-primary text-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10"
-                style="background: radial-gradient(circle at 80% 50%, #006d33, transparent 60%);"></div>
+        <section class="py-24 text-white relative overflow-hidden" style="background:linear-gradient(135deg,#173E7B 0%,#255499 100%);">
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-15"
+                style="background: radial-gradient(circle at 80% 50%, #31B6D9, transparent 60%);"></div>
             <div class="max-w-7xl mx-auto px-8 relative z-10">
                 <div class="text-center mb-16">
-                    <span class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Why
+                    <span class="font-bold text-xs uppercase tracking-[0.2em] mb-3 block" style="color:#31B6D9;">Why
                         Taigus</span>
                     <h2 class="font-serif-display text-4xl font-normal">The Taigus <em>Advantage</em></h2>
-                    <p class="text-on-primary-container/80 mt-3 text-sm">Setting benchmarks in precision food packaging
+                    <p class="mt-3 text-sm" style="color:rgba(255,255,255,0.65);">Setting benchmarks in precision food packaging
                         across India and beyond</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">biotech</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">biotech</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">High Precision IML</h4>
@@ -1587,7 +1611,7 @@
                     </div>
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">eco</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">eco</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">Eco-Conscious Design</h4>
@@ -1597,7 +1621,7 @@
                     </div>
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">speed</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">speed</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">Rapid Prototyping</h4>
@@ -1607,7 +1631,7 @@
                     </div>
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">lock</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">lock</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">Hermetic Sealing</h4>
@@ -1617,7 +1641,7 @@
                     </div>
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">architecture</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">architecture</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">Custom Mould Development</h4>
@@ -1627,7 +1651,7 @@
                     </div>
                     <div class="flex gap-5">
                         <div class="flex-shrink-0 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-secondary-fixed-dim">verified_user</span>
+                            <span class="material-symbols-outlined" style="color:#31B6D9;">verified_user</span>
                         </div>
                         <div>
                             <h4 class="font-bold mb-1.5">ISO 22000 Compliant</h4>
@@ -1642,13 +1666,13 @@
 
 
         <!-- Why Choose Taigus -->
-        <section class="py-24 bg-primary text-white">
+        <section class="py-24 text-white" style="background:linear-gradient(160deg,#292C34 0%,#173E7B 100%);">
             <div class="max-w-7xl mx-auto px-8">
                 <h2 class="text-4xl font-bold mb-16 text-editorial text-center">Why Leading Brands Choose Taigus</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-12">
                     <div class="text-center group">
                         <div
-                            class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary transition-colors">
+                            class="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors" style="" onmouseover="this.style.background='#31B6D9';" onmouseout="this.style.background='rgba(255,255,255,0.1)';">
                             <span class="material-symbols-outlined text-4xl" data-icon="brush" data-weight="fill"
                                 style="font-variation-settings: 'FILL' 1;">brush</span>
                         </div>
@@ -1705,13 +1729,13 @@
 
                     <!-- Left panel -->
                     <div
-                        class="lg:w-2/5 bg-primary text-white p-12 flex flex-col justify-between relative overflow-hidden">
+                        class="lg:w-2/5 text-white p-12 flex flex-col justify-between relative overflow-hidden" style="background:linear-gradient(160deg,#173E7B 0%,#255499 100%);">>
                         <div
                             class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-white/5 translate-x-16 translate-y-16">
                         </div>
                         <div class="relative z-10">
                             <span
-                                class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Get
+                                class="font-bold text-xs uppercase tracking-[0.2em] mb-4 block" style="color:#31B6D9;">Get
                                 in Touch</span>
                             <h2 class="font-serif-display text-4xl font-normal mb-5">Ready to elevate<br /><em>your
                                     packaging?</em></h2>
@@ -1723,7 +1747,7 @@
                                     <div
                                         class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <span
-                                            class="material-symbols-outlined text-secondary-fixed-dim fill-icon">call</span>
+                                            class="material-symbols-outlined fill-icon" style="color:#31B6D9;">call</span>
                                     </div>
                                     <div>
                                         <p class="text-white/55 text-xs">Call us direct</p>
@@ -1735,7 +1759,7 @@
                                     <div
                                         class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <span
-                                            class="material-symbols-outlined text-secondary-fixed-dim fill-icon">mail</span>
+                                            class="material-symbols-outlined fill-icon" style="color:#31B6D9;">mail</span>
                                     </div>
                                     <div>
                                         <p class="text-white/55 text-xs">Email our sales team</p>
@@ -1746,7 +1770,7 @@
                                     <div
                                         class="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
                                         <span
-                                            class="material-symbols-outlined text-secondary-fixed-dim fill-icon">location_on</span>
+                                            class="material-symbols-outlined fill-icon" style="color:#31B6D9;">location_on</span>
                                     </div>
                                     <div>
                                         <p class="text-white/55 text-xs">Manufacturing facility</p>
@@ -1842,7 +1866,8 @@
                             </div>
                             <div class="md:col-span-2">
                                 <button
-                                    class="w-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-base font-black py-4.5 py-4 rounded-xl hover:scale-[1.015] active:scale-95 transition-all shadow-lg shadow-tertiary-container/20 flex items-center justify-center gap-3">
+                                    class="w-full text-white text-base font-black py-4 rounded-xl hover:scale-[1.015] active:scale-95 transition-all flex items-center justify-center gap-3"
+                                    style="background:linear-gradient(135deg,#E33B7A,#F0656A);box-shadow:0 4px 20px rgba(227,59,122,0.35);">
                                     <span class="material-symbols-outlined fill-icon">send</span>
                                     Get Instant Quote &amp; Request Samples
                                 </button>
@@ -1861,7 +1886,7 @@
         <section class="py-24 bg-surface-container-low">
             <div class="max-w-3xl mx-auto px-8">
                 <div class="text-center mb-14">
-                    <span class="text-secondary font-bold tracking-[0.2em] uppercase text-xs mb-3 block">FAQ</span>
+                    <span class="font-bold tracking-[0.2em] uppercase text-xs mb-3 block" style="color:#2F8FD4;">FAQ</span>
                     <h2 class="font-serif-display text-4xl font-normal text-primary">Frequently Asked <em>Questions</em>
                     </h2>
                 </div>
@@ -1940,7 +1965,7 @@
         <!-- ═══════════════════════════════════════════
              CUSTOM SOLUTIONS CTA
         ════════════════════════════════════════════ -->
-        <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <section class="py-24 text-white relative overflow-hidden" style="background:linear-gradient(160deg,#292C34 0%,#173E7B 100%);">
             <div class="absolute inset-0 opacity-5">
                 <img alt="High-speed industrial robotics placing IML label into a steel mold"
                     class="w-full h-full object-cover"
@@ -1950,18 +1975,18 @@
                 <div class="flex flex-col md:flex-row items-center gap-16">
                     <div class="flex-1">
                         <span
-                            class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Bespoke
+                            class="font-bold text-xs uppercase tracking-[0.2em] mb-4 block" style="color:#31B6D9;">Bespoke
                             Engineering</span>
                         <h2 class="font-serif-display text-4xl font-normal mb-8">Need Something <em>Unique?</em></h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-7 mb-10">
                             <div>
-                                <div class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-wider mb-2">
+                                <div class="font-bold text-xs uppercase tracking-wider mb-2" style="color:#31B6D9;">
                                     Custom Moulds</div>
                                 <p class="text-primary-fixed text-sm opacity-80">Proprietary shapes tailored to your
                                     brand identity and shelf footprint.</p>
                             </div>
                             <div>
-                                <div class="text-secondary-fixed-dim font-bold text-xs uppercase tracking-wider mb-2">
+                                <div class="font-bold text-xs uppercase tracking-wider mb-2" style="color:#31B6D9;">
                                     Unique Finishes</div>
                                 <p class="text-primary-fixed text-sm opacity-80">Matte, gloss, or metallic IML label
                                     finishes for premium market positioning.</p>
@@ -1969,7 +1994,8 @@
                         </div>
                         <a href="#contact-form">
                             <button
-                                class="bg-secondary text-white px-8 py-3.5 font-bold text-xs uppercase tracking-widest rounded-xl hover:brightness-110 transition-all">Start
+                                class="text-white px-8 py-3.5 font-bold text-xs uppercase tracking-widest rounded-xl hover:opacity-90 transition-all"
+                                style="background:linear-gradient(135deg,#31B6D9,#2F8FD4);">Start
                                 Custom Project</button>
                         </a>
                     </div>
@@ -1980,7 +2006,7 @@
                         <ul class="space-y-4">
                             <li class="flex items-center gap-3">
                                 <span
-                                    class="material-symbols-outlined text-secondary-fixed-dim text-lg fill-icon">verified</span>
+                                    class="material-symbols-outlined text-lg fill-icon" style="color:#31B6D9;">verified</span>
                                 <span class="text-sm font-medium">Bavla, Gujarat Production Hub</span>
                             </li>
                             <li class="flex items-center gap-3">
@@ -2005,19 +2031,21 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+    <footer class="w-full" style="background:#1a1f2e; border-top:1px solid rgba(255,255,255,0.07);">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
             <div class="col-span-1">
-                <div class="text-xl font-bold text-blue-900 dark:text-blue-100 mb-6">Taigus</div>
-                <p class="text-slate-500 text-sm leading-relaxed">Precision Engineering &amp; Food-Grade Purity for the
+                <div class="text-xl font-bold mb-6" style="background:linear-gradient(135deg,#31B6D9,#E33B7A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Taigus</div>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5);">Precision Engineering &amp; Food-Grade Purity for the
                     global food industry.</p>
                 <div class="flex gap-3 mt-4">
                     <a href="tel:+919876543210"
-                        class="w-9 h-9 bg-primary/8 rounded-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+                        style="background:rgba(49,182,217,0.15);color:#31B6D9;" onmouseover="this.style.background='#31B6D9';this.style.color='#fff';" onmouseout="this.style.background='rgba(49,182,217,0.15)';this.style.color='#31B6D9';">
                         <span class="material-symbols-outlined text-sm">call</span>
                     </a>
                     <a href="mailto:sales@taigus.com"
-                        class="w-9 h-9 bg-primary/8 rounded-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                        class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
+                        style="background:rgba(49,182,217,0.15);color:#31B6D9;" onmouseover="this.style.background='#31B6D9';this.style.color='#fff';" onmouseout="this.style.background='rgba(49,182,217,0.15)';this.style.color='#31B6D9';">
                         <span class="material-symbols-outlined text-sm">mail</span>
                     </a>
                 </div>
@@ -2031,50 +2059,47 @@
                     <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
                             href="#">ST Series - Square Snap Fit</a></li>
                     <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
-                            href="#">OC Series — Oval Snap Fit</a></li>
+                            href="#">OC Series - Oval Snap Fit</a></li>
                     <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
                             href="#">SRT series - Twist Pack </a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="uppercase tracking-wider text-xs font-semibold text-green-700 dark:text-green-500 mb-6">Quick
+                <h5 class="uppercase tracking-wider text-xs font-semibold mb-6" style="color:#31B6D9;">Quick
                     Links</h5>
                 <ul class="space-y-4">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Sustainability</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Certifications</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Applications</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Technology</a></li>
                 </ul>
             </div>
             <div>
-                <h5 class="uppercase tracking-wider text-xs font-semibold text-green-700 dark:text-green-500 mb-6">
+                <h5 class="uppercase tracking-wider text-xs font-semibold mb-6" style="color:#31B6D9;">
                     Policies</h5>
                 <ul class="space-y-4">
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Privacy Policy</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Terms of Service</a></li>
-                    <li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 hover:translate-x-1 transition-transform duration-200 block"
+                    <li><a class="hover:translate-x-1 transition-transform duration-200 block text-sm" style="color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#31B6D9';" onmouseout="this.style.color='rgba(255,255,255,0.5)';"
                             href="#">Cookie Policy</a></li>
                 </ul>
             </div>
         </div>
         <div
-            class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">© 2026 Taigus Industrial Packaging.
+            class="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+            style="border-top:1px solid rgba(255,255,255,0.07);">
+            <p class="text-xs font-semibold uppercase tracking-wider" style="color:rgba(255,255,255,0.4);">© 2026 Taigus Industrial Packaging.
                 All rights reserved. Precision Engineering &amp; Food-Grade Purity.</p>
-            <div class="flex gap-6">
-                <span
-                    class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">social_leaderboard</span>
-                <span class="tag-pill bg-secondary/10 text-secondary">ISO 22000</span>
-                <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">language</span>
-                <span class="tag-pill bg-secondary/10 text-secondary">GMP</span>
-                <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">groups</span>
-                <span class="tag-pill bg-secondary/10 text-secondary">Food Grade</span>
+            <div class="flex gap-6 items-center">
+                <span class="tag-pill" style="background:rgba(49,182,217,0.12);color:#31B6D9;">ISO 22000</span>
+                <span class="tag-pill" style="background:rgba(49,182,217,0.12);color:#31B6D9;">GMP</span>
+                <span class="tag-pill" style="background:rgba(49,182,217,0.12);color:#31B6D9;">Food Grade</span>
             </div>
         </div>
     </footer>
