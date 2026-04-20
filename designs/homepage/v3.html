@@ -14,7 +14,95 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#e7edf3",
+            "inverse-surface": "#101922",
+            "on-tertiary-fixed": "#181c22",
+            "background": "#f6f7f8",
+            "on-background": "#0d141b",
+            "inverse-on-surface": "#f6f7f8",
+            "primary-fixed": "#d5e3ff",
+            "tertiary-container": "#2d3038",
+            "surface": "#ffffff",
+            "surface-tint": "#137fec",
+            "surface-container": "#f6f7f8",
+            "on-error-container": "#93000a",
+            "outline-variant": "#e7edf3",
+            "outline": "#cfdbe7",
+            "secondary-fixed-dim": "#adc8f7",
+            "on-tertiary-container": "#eef0fa",
+            "tertiary": "#101922",
+            "tertiary-fixed": "#f1f3fd",
+            "on-surface-variant": "#4c739a",
+            "on-primary-fixed": "#001b3c",
+            "tertiary-fixed-dim": "#e0e2ec",
+            "surface-container-highest": "#cfdbe7",
+            "on-tertiary-fixed-variant": "#414753",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#2c4770",
+            "primary-fixed-dim": "#a8c8ff",
+            "surface-container-high": "#e7edf3",
+            "surface-dim": "#f6f7f8",
+            "secondary": "#4c739a",
+            "surface-variant": "#e7edf3",
+            "on-primary": "#ffffff",
+            "surface-bright": "#ffffff",
+            "surface-container-low": "#f8fafc",
+            "primary": "#137fec",
+            "secondary-fixed": "#d5e3ff",
+            "inverse-primary": "#a8c8ff",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#137fec",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-secondary-fixed": "#001b3c",
+            "on-secondary-container": "#0d141b",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#004689",
+            "primary-container": "#e7edf3",
+            "on-surface": "#0d141b",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          }
+        },
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
 
+    .comparison-pillar {
+      background: linear-gradient(to bottom, transparent, #137fec, transparent);
+      width: 1px;
+    }
+
+    .sapphire-glow {
+      box-shadow: 0 10px 15px -3px rgba(19, 127, 236, 0.2);
+    }
+  </style>
   <style>
     /* ===========================
        COLOR TOKENS
@@ -1536,7 +1624,7 @@
   <main>
 
     <!-- =====================
-         1. HERO SECTION
+         1. HERO SECTIONWhy Brands Choose Taigus IML Containers
     ===================== -->
     <section id="hero">
       <div class="hero-orb hero-orb-1"></div>
@@ -1561,7 +1649,7 @@
             </h1>
 
             <p class="hero-sub anim-fade-up anim-delay-2">
-              Taigus manufactures high-quality In Mould Labelling (IML) plastic containers for the food &amp; dairy
+              high-quality In Mould Labelling (IML) plastic containers for the food &amp; dairy
               industry. From 125ml single serve cups to 2000ml bulk packs food grade quality, tamper-evident design, and
               stunning 360° branding.
             </p>
@@ -1908,221 +1996,306 @@
         </div>
       </div>
     </section>
-
-    <!-- =====================
+    <!-- 6. ABOUT SNAPSHOT -->
+    <section class="py-24 bg-surface-container-low">
+      <div class="container mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+        <div class="relative h-[600px]">
+          <img class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700"
+            data-alt="wide shot of a clean modern industrial manufacturing facility with robotic arms and conveyor belts in soft blue lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArOL0PKLq0xTVx0cYvIcOE8eyuva5MSApYHhwdXIv0AgGGQucSBoA3x8-B-W9bKT9FoG37O1A53A1yjA8kgUUqj6szkw69gAPFENVrT0KYxarmiWrqSIINgQJfL6pKufw1Iyj0A1eSafTRKq3PZZkd6rxo4Zi0dchkwne3kwtHCkA1kpJ0M5N1ZPZKt9hrC7Vc0fd8Z1DoS6TpVfMbeyk8RrVQyGJzH0KxHEsLttEVx_w_xz3TqEisvwaYE0iBNV_AMWN7qZwsVM4" />
+          <div class="absolute -bottom-10 -right-10 bg-primary p-12 text-on-primary hidden lg:block">
+            <div class="text-4xl font-black">24/7</div>
+            <div class="text-sm font-black uppercase tracking-widest opacity-80">Automated Production</div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-4xl font-bold tracking-tight mb-8">Built on Precision.<br />Driven by Partnership.</h2>
+          <p class="text-on-surface-variant text-lg leading-relaxed mb-10">Our flagship facility in Bavla spans over
+            50,000 sq. ft., equipped with high-speed injection moulding machines and 6-axis robotic handlers. We treat
+            packaging as a science.</p>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div class="bg-primary-fixed p-4 h-fit rounded-lg"><span
+                  class="material-symbols-outlined text-primary">factory</span></div>
+              <div>
+                <h5 class="font-bold text-lg mb-1">State-of-the-Art Facility</h5>
+                <p class="text-sm text-on-surface-variant">Class 100,000 clean room environment for dairy-grade
+                  production.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="bg-primary-fixed p-4 h-fit rounded-lg"><span
+                  class="material-symbols-outlined text-primary">biotech</span></div>
+              <div>
+                <h5 class="font-bold text-lg mb-1">Advanced QC Lab</h5>
+                <p class="text-sm text-on-surface-variant">Rigorous testing for impact, leakages, and ink adhesion.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div class="bg-primary-fixed p-4 h-fit rounded-lg"><span
+                  class="material-symbols-outlined text-primary">handshake</span></div>
+              <div>
+                <h5 class="font-bold text-lg mb-1">Strategic Partnerships</h5>
+                <p class="text-sm text-on-surface-variant">We don't just sell boxes; we design shelf-strategies with our
+                  clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 7. TECHNOLOGY SECTION -->
+    <section class="py-24 bg-surface">
+      <div class="container mx-auto px-8">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <h2 class="text-4xl font-bold tracking-tight mb-6">How It Works</h2>
+          <p class="text-on-surface-variant">Witness the fusion of art and engineering in our 3-step production cycle.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 mb-24 relative">
+          <div class="absolute top-1/2 left-0 w-full h-px bg-outline-variant hidden md:block -z-10"></div>
+          <div class="bg-surface p-8 text-center border border-outline-variant rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary text-white flex items-center justify-center rounded-full mx-auto mb-6 font-black">
+              01</div>
+            <h4 class="text-xl font-bold mb-2">Label Placement</h4>
+            <p class="text-sm text-on-surface-variant">Pre-printed polypropylene labels are positioned in the mould by
+              robotics.</p>
+          </div>
+          <div class="bg-surface p-8 text-center border border-outline-variant rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary text-white flex items-center justify-center rounded-full mx-auto mb-6 font-black">
+              02</div>
+            <h4 class="text-xl font-bold mb-2">Injection Moulding</h4>
+            <p class="text-sm text-on-surface-variant">Molten polymer is injected, fusing permanently with the label as
+              it cools.</p>
+          </div>
+          <div class="bg-surface p-8 text-center border border-outline-variant rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary text-white flex items-center justify-center rounded-full mx-auto mb-6 font-black">
+              03</div>
+            <h4 class="text-xl font-bold mb-2">Finished Product</h4>
+            <p class="text-sm text-on-surface-variant">A single-piece container emerges with photographic graphics and
+              extreme durability.</p>
+          </div>
+        </div>
+        <!-- =====================
          6. TECHNOLOGY
     ===================== -->
-    <section id="technology">
-      <div class="container">
-        <div class="tech-grid">
-          <div>
-            <span class="section-label section-label--blue">Advanced Manufacturing</span>
-            <h2
-              style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.02em;color:var(--navy-shadow);margin-bottom:2rem;line-height:1.2;">
-              Advanced Manufacturing<br />You Can Trust
-            </h2>
+        <section id="technology">
+          <div class="container">
+            <div class="tech-grid">
+              <div>
+                <span class="section-label section-label--blue">Advanced Manufacturing</span>
+                <h2
+                  style="font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.02em;color:var(--navy-shadow);margin-bottom:2rem;line-height:1.2;">
+                  Advanced Manufacturing<br />You Can Trust
+                </h2>
 
-            <div class="tech-steps">
-              <div class="tech-step">
-                <div class="tech-step-num">01</div>
-                <div class="tech-step-body">
-                  <h4>Label Placement</h4>
-                  <p>Pre-printed polypropylene labels are robotically positioned inside the mould with millimetre
-                    precision every single cycle.</p>
-                </div>
-              </div>
-              <div class="tech-step">
-                <div class="tech-step-num">02</div>
-                <div class="tech-step-body">
-                  <h4>Injection Moulding</h4>
-                  <p>Japanese JSW machines inject molten food-grade PP, permanently fusing label and container as the
-                    material cools.</p>
-                </div>
-              </div>
-              <div class="tech-step">
-                <div class="tech-step-num">03</div>
-                <div class="tech-step-body">
-                  <h4>Quality Inspection &amp; Dispatch</h4>
-                  <p>Pharma-level QC protocols; zero defect targets, impact testing, and leak checks before every
-                    shipment.</p>
-                </div>
-              </div>
-            </div>
+                <!-- <div class="tech-steps">
+                  <div class="tech-step">
+                    <div class="tech-step-num">01</div>
+                    <div class="tech-step-body">
+                      <h4>Label Placement</h4>
+                      <p>Pre-printed polypropylene labels are robotically positioned inside the mould with millimetre
+                        precision every single cycle.</p>
+                    </div>
+                  </div>
+                  <div class="tech-step">
+                    <div class="tech-step-num">02</div>
+                    <div class="tech-step-body">
+                      <h4>Injection Moulding</h4>
+                      <p>Japanese JSW machines inject molten food-grade PP, permanently fusing label and container as
+                        the
+                        material cools.</p>
+                    </div>
+                  </div>
+                  <div class="tech-step">
+                    <div class="tech-step-num">03</div>
+                    <div class="tech-step-body">
+                      <h4>Quality Inspection &amp; Dispatch</h4>
+                      <p>Pharma-level QC protocols; zero defect targets, impact testing, and leak checks before every
+                        shipment.</p>
+                    </div>
+                  </div>
+                </div> -->
 
-            <div class="tech-machines">
-              <div class="tech-machine-card">
-                <span class="material-symbols-outlined">precision_manufacturing</span>
-                <h5>Japanese JSW Machines</h5>
-                <p>High-precision injection moulding</p>
+                <div class="tech-machines">
+                  <div class="tech-machine-card">
+                    <span class="material-symbols-outlined">precision_manufacturing</span>
+                    <h5>Japanese JSW Machines</h5>
+                    <p>High-precision injection moulding</p>
+                  </div>
+                  <div class="tech-machine-card">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                    <h5>Robotic Automation</h5>
+                    <p>Consistent, hands-free label placement</p>
+                  </div>
+                  <div class="tech-machine-card">
+                    <span class="material-symbols-outlined">biotech</span>
+                    <h5>In-House QC Lab</h5>
+                    <p>Impact, leak &amp; adhesion testing</p>
+                  </div>
+                  <div class="tech-machine-card">
+                    <span class="material-symbols-outlined">factory</span>
+                    <h5>Bavla, Ahmedabad</h5>
+                    <p>State of the art production facility</p>
+                  </div>
+                </div>
               </div>
-              <div class="tech-machine-card">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <h5>Robotic Automation</h5>
-                <p>Consistent, hands-free label placement</p>
-              </div>
-              <div class="tech-machine-card">
-                <span class="material-symbols-outlined">biotech</span>
-                <h5>In-House QC Lab</h5>
-                <p>Impact, leak &amp; adhesion testing</p>
-              </div>
-              <div class="tech-machine-card">
-                <span class="material-symbols-outlined">factory</span>
-                <h5>Bavla, Ahmedabad</h5>
-                <p>State of the art production facility</p>
+
+              <div class="tech-visual">
+                <img src="../../assets/Products/image_479984976_7.png"
+                  alt="Taigus manufacturing facility with JSW injection moulding technology" />
+                <div class="tech-cert-strip">
+                  <div class="tech-cert">
+                    <div>ISO 22000:2018</div>
+                    <div>Food Safety</div>
+                  </div>
+                  <div class="tech-cert">
+                    <div>ERP &amp; GMP</div>
+                    <div>Compliant</div>
+                  </div>
+                  <div class="tech-cert">
+                    <div>Virgin PP</div>
+                    <div>Food Grade</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="tech-visual">
-            <img src="../../assets/Products/image_479984976_7.png"
-              alt="Taigus manufacturing facility with JSW injection moulding technology" />
-            <div class="tech-cert-strip">
-              <div class="tech-cert">
-                <div>ISO 22000:2018</div>
-                <div>Food Safety</div>
-              </div>
-              <div class="tech-cert">
-                <div>ERP &amp; GMP</div>
-                <div>Compliant</div>
-              </div>
-              <div class="tech-cert">
-                <div>Virgin PP</div>
-                <div>Food Grade</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================
+        <!-- =====================
          7. WHY CHOOSE TAIGUS
     ===================== -->
-    <section id="why-choose">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label section-label--blue">Your Reliable Partner</span>
-          <h2>Your Reliable Packaging Partner</h2>
-          <p>Taigus brings together modern infrastructure, pharma-grade precision, and a genuine long-term partnership
-            mindset.</p>
-        </div>
-        <div class="why-grid">
-          <div class="why-card">
-            <span class="material-symbols-outlined">rocket_launch</span>
-            <h4>Emerging Leader</h4>
-            <p>Modern infrastructure with a strong, uncompromising focus on quality at every step.</p>
+        <section id="why-choose">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-label section-label--blue">Your Reliable Partner</span>
+              <h2>Your Reliable Packaging Partner</h2>
+              <p>Taigus brings together modern infrastructure, pharma-grade precision, and a genuine long-term
+                partnership
+                mindset.</p>
+            </div>
+            <div class="why-grid">
+              <div class="why-card">
+                <span class="material-symbols-outlined">rocket_launch</span>
+                <h4>Emerging Leader</h4>
+                <p>Modern infrastructure with a strong, uncompromising focus on quality at every step.</p>
+              </div>
+              <div class="why-card">
+                <span class="material-symbols-outlined">biotech</span>
+                <h4>Pharma-Grade Precision</h4>
+                <p>Pharma background precision combined with deep food industry expertise.</p>
+              </div>
+              <div class="why-card">
+                <span class="material-symbols-outlined">tune</span>
+                <h4>Flexible MOQs</h4>
+                <p>Suitable for startups and large scale brands: we grow with your business.</p>
+              </div>
+              <div class="why-card">
+                <span class="material-symbols-outlined">support_agent</span>
+                <h4>Quick Response</h4>
+                <p>Dedicated support for customization with fast response times you can count on.</p>
+              </div>
+              <div class="why-card">
+                <span class="material-symbols-outlined">handshake</span>
+                <h4>Long-Term Partnership</h4>
+                <p>We invest in understanding your brand and growing together over the long term.</p>
+              </div>
+            </div>
           </div>
-          <div class="why-card">
-            <span class="material-symbols-outlined">biotech</span>
-            <h4>Pharma-Grade Precision</h4>
-            <p>Pharma background precision combined with deep food industry expertise.</p>
-          </div>
-          <div class="why-card">
-            <span class="material-symbols-outlined">tune</span>
-            <h4>Flexible MOQs</h4>
-            <p>Suitable for startups and large scale brands: we grow with your business.</p>
-          </div>
-          <div class="why-card">
-            <span class="material-symbols-outlined">support_agent</span>
-            <h4>Quick Response</h4>
-            <p>Dedicated support for customization with fast response times you can count on.</p>
-          </div>
-          <div class="why-card">
-            <span class="material-symbols-outlined">handshake</span>
-            <h4>Long-Term Partnership</h4>
-            <p>We invest in understanding your brand and growing together over the long term.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- =====================
+        <!-- =====================
          8. TESTIMONIALS
     ===================== -->
-    <section id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label section-label--blue">Social Proof</span>
-          <h2>What Our Clients Say</h2>
-          <p>Trusted by dairy brands, FMCG players, and food entrepreneurs across India.</p>
-        </div>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-quote-icon">"</div>
-            <div class="testi-stars">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <section id="testimonials">
+          <div class="container">
+            <div class="section-header">
+              <span class="section-label section-label--blue">Social Proof</span>
+              <h2>What Our Clients Say</h2>
+              <p>Trusted by dairy brands, FMCG players, and food entrepreneurs across India.</p>
             </div>
-            <blockquote>
-              "Taigus transformed our premium ghee packaging. The IML finish has completely eliminated label peeling
-              issues in humid retail environments. Our brand visibility on shelf has never been stronger."
-            </blockquote>
-            <div class="testi-author">
-              <div class="testi-avatar">OH</div>
-              <div>
-                <div class="testi-name">Operations Head</div>
-                <div class="testi-role">National Dairy Brand</div>
+            <div class="testi-grid">
+              <div class="testi-card">
+                <div class="testi-quote-icon">"</div>
+                <div class="testi-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <blockquote>
+                  "Taigus transformed our premium ghee packaging. The IML finish has completely eliminated label peeling
+                  issues in humid retail environments. Our brand visibility on shelf has never been stronger."
+                </blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">OH</div>
+                  <div>
+                    <div class="testi-name">Operations Head</div>
+                    <div class="testi-role">National Dairy Brand</div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-card">
+                <div class="testi-quote-icon">"</div>
+                <div class="testi-stars">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <blockquote>
+                  "Their turnaround time for custom moulds was exceptional. A truly professional partner in the plastic
+                  packaging space flexible, communicative, and delivering zero defect quality consistently."
+                </blockquote>
+                <div class="testi-author">
+                  <div class="testi-avatar">PM</div>
+                  <div>
+                    <div class="testi-name">Product Manager</div>
+                    <div class="testi-role">Leading FMCG Company</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-quote-icon">"</div>
-            <div class="testi-stars">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <blockquote>
-              "Their turnaround time for custom moulds was exceptional. A truly professional partner in the plastic
-              packaging space flexible, communicative, and delivering zero defect quality consistently."
-            </blockquote>
-            <div class="testi-author">
-              <div class="testi-avatar">PM</div>
-              <div>
-                <div class="testi-name">Product Manager</div>
-                <div class="testi-role">Leading FMCG Company</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- =====================
+        <!-- =====================
          9. FINAL CTA
     ===================== -->
-    <section id="final-cta">
-      <div class="cta-orb-1"></div>
-      <div class="cta-orb-2"></div>
-      <div class="container cta-content">
-        <span class="section-label section-label--light">Get Started Today</span>
-        <h2>Ready to Elevate<br />Your Packaging?</h2>
-        <p>Whether you need standard containers or fully customized IML solutions, our team is ready to help you build
-          packaging that wins on shelf.</p>
-        <div class="cta-btn-row">
-          <a href="mailto:info@taigus.in" class="btn btn-primary">
-            <span class="material-symbols-outlined" style="font-size:1.1rem;">bolt</span>
-            Get Instant Quote
-          </a>
-          <a href="#" class="btn btn-secondary">
-            <span class="material-symbols-outlined" style="font-size:1.1rem;">science</span>
-            Request Free Samples
-          </a>
-          <a href="#" class="btn"
-            style="background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.2);">
-            <span class="material-symbols-outlined" style="font-size:1.1rem;">download</span>
-            Download Full Catalog
-          </a>
-        </div>
-        <div class="contact-strip">
-          <div class="contact-strip-item">
-            <span class="material-symbols-outlined">call</span>
-            +91 99982 25583
+        <section id="final-cta">
+          <div class="cta-orb-1"></div>
+          <div class="cta-orb-2"></div>
+          <div class="container cta-content">
+            <span class="section-label section-label--light">Get Started Today</span>
+            <h2>Ready to Elevate<br />Your Packaging?</h2>
+            <p>Whether you need standard containers or fully customized IML solutions, our team is ready to help you
+              build
+              packaging that wins on shelf.</p>
+            <div class="cta-btn-row">
+              <a href="mailto:info@taigus.in" class="btn btn-primary">
+                <span class="material-symbols-outlined" style="font-size:1.1rem;">bolt</span>
+                Get Instant Quote
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <span class="material-symbols-outlined" style="font-size:1.1rem;">science</span>
+                Request Free Samples
+              </a>
+              <a href="#" class="btn"
+                style="background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.2);">
+                <span class="material-symbols-outlined" style="font-size:1.1rem;">download</span>
+                Download Full Catalog
+              </a>
+            </div>
+            <div class="contact-strip">
+              <div class="contact-strip-item">
+                <span class="material-symbols-outlined">call</span>
+                +91 99982 25583
+              </div>
+              <div class="contact-strip-item">
+                <span class="material-symbols-outlined">mail</span>
+                info@taigus.in
+              </div>
+            </div>
           </div>
-          <div class="contact-strip-item">
-            <span class="material-symbols-outlined">mail</span>
-            info@taigus.in
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
   </main>
 
